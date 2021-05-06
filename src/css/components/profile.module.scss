@@ -1,0 +1,27 @@
+.header {
+    display: flex;
+    align-items: center;
+    
+    img {
+        height: 6.25rem;
+        margin-right: 1.5rem;
+        border-radius: 16px;
+        border: 1px solid var(--purple);
+    }
+    
+    h2 {
+        margin-bottom: .5rem;
+    }
+}
+
+
+// mobile
+
+@media(max-width: 500px) {
+    .header {
+        img {
+            height: 5rem;
+            margin-right: 1rem;
+        }
+    }
+}

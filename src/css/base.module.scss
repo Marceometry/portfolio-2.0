@@ -1,0 +1,87 @@
+.container main {
+    width: 60%;
+    margin: 0 auto;
+    min-height: calc(100vh - (20vh + 23rem));
+    
+    section  {
+        header {
+            margin: 1rem 7.75rem 1.5rem;
+            
+            h2 {
+                margin-bottom: .5rem;
+            }
+        }
+
+        
+        article p {
+            margin-bottom: .5rem;
+            font-weight: 400;
+            line-height: 1.5rem;
+            text-indent: 7.75rem;
+            text-align: justify;
+        }
+    }
+}
+
+
+// mobile
+
+@media(max-width: 1300px) {
+    .container main {
+        width: 70%;
+    }
+}
+
+@media(max-width: 1000px) {
+    .container main {
+        width: 80%;
+
+        section {
+            header {
+                margin-left: 6rem;
+                margin-right: 6rem;
+            }
+            
+            article p {
+                text-indent: 6rem;
+            }
+        }
+    }
+}
+
+@media(max-width: 800px) {
+    .container main {
+        width: 80%;
+
+        section {
+            header {
+                margin: 2rem 4rem 1.5rem;
+            }
+            
+            article p {
+                text-indent: 4rem;
+            }
+        }
+    }
+}
+
+@media(max-width: 500px) {
+    .container main {
+        width: 90%;
+
+        h2 {
+            font-size: 1.25rem;
+        }
+
+        section {
+            header {
+                margin-left: 0;
+                margin-right: 0;
+            }
+            
+            article p {
+                text-indent: 2.5rem;
+            }
+        }
+    }
+}
