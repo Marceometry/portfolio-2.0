@@ -19,7 +19,7 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 
-  background: var(--background);
+  background: var(--background) url('../../public/images/wallpaper.svg') no-repeat fixed center / cover;
   color: var(--text);
   font: 400 1rem 'Inter', sans-serif;
 }
