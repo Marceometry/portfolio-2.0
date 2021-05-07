@@ -1,8 +1,11 @@
 import React from 'react'
 import Head from 'next/head'
 import { Green, Purple } from '../components/TextColor'
+
 import landing from '../css/landing.module.scss'
 import about from '../css/components/about.module.scss'
+import tech from '../css/components/technologies.module.scss'
+import projects from '../css/components/projects.module.scss'
 
 export default function Landing() {
   return (
@@ -62,20 +65,139 @@ export default function Landing() {
       </div>
 
       <div className={about.container}>
-        <h1>Sobre meus projetos</h1>
+        <h2>Sobre meus projetos</h2>
 
         <main>
           <img src="/icons/arrow-left.svg" alt="<" />
           
-          <div>
-            <p> Aplicações responsivas que se adaptam aos variados tamanhos de tela. </p>
+          <div className={about.textContainer}>
+            <p className={about.active}> Aplicações <Green>responsivas</Green> que se <Green>adaptam</Green> aos variados <Green>tamanhos</Green> de <Green>tela</Green>. </p>
 
-            <p> Atenção aos detalhes pequenos do layout, para que nenhum elemento saia do seu devido lugar. </p>
+            <p> Atenção aos <Green>detalhes pequenos</Green> do layout, para que nenhum elemento saia do seu <Green>devido lugar</Green>. </p>
 
-            <p> Clean code, padronização e organização, procurando sempre realizar boas práticas no código. </p>
+            <p> <Green>Clean code</Green>, padronização e organização, procurando sempre realizar <Green>boas práticas</Green> no <Green>código</Green>. </p>
           </div>
 
           <img src="/icons/arrow-right.svg" alt=">" />
+        </main>
+
+        <div className={about.dotsContainer}>
+          <button className={about.dot} id={about.active}></button>
+          <button className={about.dot}></button>
+          <button className={about.dot}></button>
+        </div>
+      </div>
+
+      <div className={tech.container}>
+        <h2>Tecnologias que já tive contato</h2>
+
+        <main>
+          <div className={tech.card}>
+            <h3>FrontEnd</h3>
+            <hr />
+
+            <div className={tech.technologies}>
+              <div className={tech.technology}>
+                <img src="/icons/html.svg" alt="" />
+                <span>HTML</span>
+              </div>
+              
+              <div className={tech.technology}>
+                <img src="/icons/css.svg" alt="" />
+                <span>CSS</span>
+              </div>
+              
+              <div className={tech.technology}>
+                <img src="/icons/js.svg" alt="" />
+                <span>JavaScript</span>
+              </div>
+              
+              <div className={tech.technology}>
+                <img src="/icons/ts.svg" alt="" />
+                <span>TypeScript</span>
+              </div>
+              
+              <div className={tech.technology}>
+                <img src="/icons/react.svg" alt="" />
+                <span>ReactJS</span>
+              </div>
+              
+              <div className={tech.technology}>
+                <img src="/icons/next.svg" alt="" />
+                <span>Next.js</span>
+              </div>
+              
+              <div className={tech.technology}>
+                <img src="/icons/sass.svg" alt="" />
+                <span>Sass</span>
+              </div>
+            </div>
+          </div>
+
+          <img className={tech.codeImg} src="/icons/code-dark.svg" alt="</>" />
+
+          <div className={tech.card}>
+            <h3>BackEnd</h3>
+            <hr />
+
+            <div className={tech.technologies}>
+              <div className={tech.technology}>
+                <img src="/icons/node.svg" alt="" />
+                <span>Node.js</span>
+              </div>
+              
+              <div className={tech.technology}>
+                <img src="/icons/mongo.svg" alt="" />
+                <span>MongoDB</span>
+              </div>
+              
+              <div className={tech.technology}>
+                <img src="/icons/axios.svg" alt="" />
+                <span>Axios</span>
+              </div>
+              
+              <div className={tech.technology}>
+                <img src="/icons/database.svg" alt="" />
+                <span>SQL</span>
+              </div>
+              
+              <div className={tech.technology}>
+                <img src="/icons/database.svg" alt="" />
+                <span>SQLite</span>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+
+      <div className={projects.container}>
+        <h2>Projetos</h2>
+
+        <main>
+          <section>
+            <h3>Next Level Week (Rocketseat)</h3>
+
+            <div className={projects.projects}>
+              <img src="/icons/arrow-left.svg" alt="<" />
+
+              <div className={projects.project}>
+                <img src="/images/happy.png" alt="Happy" />
+                <span>Happy</span>
+              </div>
+              
+              <div className={projects.project}>
+                <img src="/images/moveit.png" alt="Happy" />
+                <span>MoveIt</span>
+              </div>
+              
+              <div className={projects.project}>
+                <img src="/images/podcastr.png" alt="Happy" />
+                <span>Podcastr</span>
+              </div>
+
+              <img src="/icons/arrow-right.svg" alt=">" />
+            </div>
+          </section>
         </main>
       </div>
     </div>

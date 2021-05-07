@@ -1,14 +1,46 @@
 .container {
     width: 100vw;
-    padding: 4rem 0;
-
+    padding: 5rem 0;
+  
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 
     main {
+        width: min(80%, 1100px);
+        margin-top: 4rem;
         display: flex;
         align-items: center;
+
+        .textContainer {
+            flex: 1;
+            text-align: center;
+
+            p {
+                max-width: 50%;
+                margin: 0 auto;
+                display: none;
+
+                &.active {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .dotsContainer {
+        margin: 1rem 0 0;
+
+        .dot {
+            padding: 6px;
+            margin: 0 .5rem;
+            border-radius: 50%;
+            background: var(--text);
+
+            &#active {
+                background: var(--green);
+            }
+        }
     }
 }

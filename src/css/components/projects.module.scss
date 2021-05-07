@@ -1,0 +1,60 @@
+.container {
+    width: 100vw;
+    padding: 5rem 0;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    main {
+        width: min(80%, 1100px);
+        margin-top: 4rem;
+
+        .projects {
+            width: 100%;
+            border-top: 1px solid var(--purple);
+            display: flex;
+            justify-content: center;
+
+            .project {
+                flex: 1;
+                position: relative;
+                text-align: center;
+
+                img {
+                    width: calc(100% - 1.5rem);
+                    height: 11rem;
+                    border-radius: 0 0 8px 8px;
+                    object-fit: cover;
+                    transition: filter, .2s;
+                    cursor: pointer;
+
+                    &:hover {
+                        filter: brightness(.8);
+                    }
+
+                    &:hover + span {
+                        display: inline-block;
+                    }
+                }
+
+                span {
+                    display: none;
+                    position: absolute;
+                    left: 50%;
+                    bottom: -1.25rem;
+                    transform: translateX(-50%);
+                }
+            }
+
+            & > img:first-child {
+             transform: translateX(-3rem);   
+            }
+
+            & > img:last-child {
+             transform: translateX(3rem);   
+            }
+        }
+    }
+}

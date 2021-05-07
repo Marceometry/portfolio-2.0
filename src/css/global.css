@@ -19,9 +19,26 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 
-  background: var(--background) url('../../public/images/wallpaper.svg') no-repeat fixed center / cover;
+  background: var(--background) url('../../public/images/wallpaper.png') no-repeat fixed center / cover;
   color: var(--text);
   font: 400 1rem 'Inter', sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 1.875rem;
+  font-weight: normal;
+}
+
+p {
+  font-size: 1.5rem;
 }
 
 button, a {
