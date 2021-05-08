@@ -48,12 +48,21 @@
                 }
             }
 
-            & > img:first-child {
-             transform: translateX(-3rem);   
+            & svg {
+                cursor: pointer;
+                transition: .2s;
             }
 
-            & > img:last-child {
-             transform: translateX(3rem);   
+            & svg:hover {
+                fill: var(--green);
+            }
+
+            & > svg:first-child {
+             transform: translate(-3rem, 25%);   
+            }
+
+            & > svg:last-child {
+             transform: translate(3rem, 25%);   
             }
         }
     }

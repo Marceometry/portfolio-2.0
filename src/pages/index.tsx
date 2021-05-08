@@ -1,6 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import { Green, Purple } from '../components/TextColor'
+import { ArrowLeft, ArrowRight } from '../../public/icons/svgArrows'
 
 import landing from '../css/landing.module.scss'
 import about from '../css/components/about.module.scss'
@@ -11,36 +12,36 @@ export default function Landing() {
   return (
     <div>
       <div className={landing.container}>
-        <main>
           <Head>
             <title>Marcelino | FrontEnd Dev</title>
           </Head>
 
-          <nav>
-            <ul>
-              <li>CONTATO</li>
-              <li>PORTFOLIO</li>
-              <li>TECNOLOGIAS</li>
-            </ul>
+        <nav>
+          <ul>
+            <li>CONTATO</li>
+            <li>PORTFOLIO</li>
+            <li>TECNOLOGIAS</li>
+          </ul>
 
-            <ul>
-              <li>
-                <a href="https://github.com/marceometry">
-                  <img src="/icons/github.svg" alt="Github" />
-                  <span>Marceometry</span>
-                </a>
-              </li>
-              <li>
-                <img src="/icons/envelope.svg" alt="Email" />
-                <span>marceometry@gmail.com</span>
-              </li>
-              <li>
-                <img src="/icons/whatsapp.svg" alt="Whatsapp" />
-                <span>51 99579-4033</span>
-              </li>
-            </ul>
-          </nav>
+          <ul>
+            <li>
+              <a href="https://github.com/marceometry">
+                <img src="/icons/github.svg" alt="Github" />
+                <span>Marceometry</span>
+              </a>
+            </li>
+            <li>
+              <img src="/icons/envelope.svg" alt="Email" />
+              <span>marceometry@gmail.com</span>
+            </li>
+            <li>
+              <img src="/icons/whatsapp.svg" alt="Whatsapp" />
+              <span>51 99579-4033</span>
+            </li>
+          </ul>
+        </nav>
 
+        <main>
           <header>
               {/* <img src="https://github.com/marceometry.png" alt="Marcelino"/> */}
 
@@ -57,11 +58,11 @@ export default function Landing() {
             <p> Procuro sempre me atentar aos <Green>mínimos detalhes</Green> da interface, pensando sempre na 
             usabilidade e <Green>experiência</Green> do <Green>usuário</Green>. </p>
           </section>
-          
-          <div id={landing.arrowDown}>
-            <img src="/icons/arrow-down.svg" alt="v" />
-          </div>
         </main>
+          
+        <div id={landing.arrowDown}>
+          <img src="/icons/arrow-down.svg" alt="v" />
+        </div>
       </div>
 
       <div className={about.container}>
@@ -178,7 +179,8 @@ export default function Landing() {
             <h3>Next Level Week (Rocketseat)</h3>
 
             <div className={projects.projects}>
-              <img src="/icons/arrow-left.svg" alt="<" />
+              {/* <img className={projects.disabled} src="/icons/arrow-left.svg" alt="<" /> */}
+              <ArrowLeft />
 
               <div className={projects.project}>
                 <img src="/images/happy.png" alt="Happy" />
@@ -195,7 +197,7 @@ export default function Landing() {
                 <span>Podcastr</span>
               </div>
 
-              <img src="/icons/arrow-right.svg" alt=">" />
+              <ArrowRight />
             </div>
           </section>
         </main>
