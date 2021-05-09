@@ -48,21 +48,20 @@
                 }
             }
 
-            & svg {
+            svg {
                 cursor: pointer;
-                transition: .2s;
             }
 
-            & svg:hover {
+            svg:hover {
                 fill: var(--green);
             }
 
             & > svg:first-child {
-             transform: translate(-3rem, 25%);   
+                transform: translate(-3rem, 25%);   
             }
 
             & > svg:last-child {
-             transform: translate(3rem, 25%);   
+                transform: translate(3rem, 25%);   
             }
         }
     }

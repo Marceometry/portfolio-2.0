@@ -9,7 +9,7 @@ export function ArrowLeft() {
         <filter id="filter0_d" x="0" y="0" width="83.5487" height="109.322" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
         <feFlood flood-opacity="0" result="BackgroundImageFix"/>
         <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
-        <feOffset dx="-3" dy="1"/>
+        <feOffset dx="0" dy="1"/>
         <feGaussianBlur stdDeviation="7.5"/>
         <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"/>
         <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
@@ -31,7 +31,7 @@ export function ArrowRight() {
         <filter id="filter0_d" x="0" y="0" width="83.5487" height="109.322" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
         <feFlood flood-opacity="0" result="BackgroundImageFix"/>
         <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
-        <feOffset dx="-3" dy="1"/>
+        <feOffset dx="0" dy="1"/>
         <feGaussianBlur stdDeviation="7.5"/>
         <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"/>
         <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>

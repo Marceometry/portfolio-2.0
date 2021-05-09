@@ -1,7 +1,7 @@
 .footer {
     width: 100%;
     padding: 2rem 15% 3rem;
-    margin-top: 6rem;
+    margin-top: 8rem;
 
     color: var(--green);
     background: var(--background-2);
@@ -17,6 +17,7 @@
 
     section {
         flex: 1;
+        margin: 1rem 0 5rem;
         padding: 1rem 0 2rem;
         text-align: center;
 
@@ -52,10 +53,6 @@
                     }
                 }
             }
-        }
-    
-        p:first-child {
-            margin-bottom: 1rem;
         }
     }
 }

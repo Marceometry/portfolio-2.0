@@ -7,6 +7,7 @@ import landing from '../css/landing.module.scss'
 import about from '../css/components/about.module.scss'
 import tech from '../css/components/technologies.module.scss'
 import projects from '../css/components/projects.module.scss'
+import Footer from '../components/Footer'
 
 export default function Landing() {
   return (
@@ -69,7 +70,7 @@ export default function Landing() {
         <h2>Sobre meus projetos</h2>
 
         <main>
-          <img src="/icons/arrow-left.svg" alt="<" />
+          <ArrowLeft />
           
           <div className={about.textContainer}>
             <p className={about.active}> Aplicações <Green>responsivas</Green> que se <Green>adaptam</Green> aos variados <Green>tamanhos</Green> de <Green>tela</Green>. </p>
@@ -79,7 +80,7 @@ export default function Landing() {
             <p> <Green>Clean code</Green>, padronização e organização, procurando sempre realizar <Green>boas práticas</Green> no <Green>código</Green>. </p>
           </div>
 
-          <img src="/icons/arrow-right.svg" alt=">" />
+          <ArrowRight />
         </main>
 
         <div className={about.dotsContainer}>
@@ -179,7 +180,6 @@ export default function Landing() {
             <h3>Next Level Week (Rocketseat)</h3>
 
             <div className={projects.projects}>
-              {/* <img className={projects.disabled} src="/icons/arrow-left.svg" alt="<" /> */}
               <ArrowLeft />
 
               <div className={projects.project}>
@@ -202,6 +202,8 @@ export default function Landing() {
           </section>
         </main>
       </div>
+
+      <Footer />
     </div>
   )
 }

@@ -27,6 +27,14 @@
                 }
             }
         }
+
+        svg {
+            cursor: pointer;
+        }
+
+        svg:hover {
+            fill: var(--green);
+        }
     }
 
     .dotsContainer {
