@@ -5,7 +5,7 @@ import about from '../css/components/about.module.scss'
 export default function About() {
     return (
       <div className={about.container}>
-        <h2>Sobre meus projetos</h2>
+        <h2 className="up">Sobre meus projetos</h2>
 
         <main>
             <ArrowLeft />
@@ -22,9 +22,9 @@ export default function About() {
         </main>
 
         <div className={about.dotsContainer}>
-            <button className={about.dot} id={about.active}></button>
-            <button className={about.dot}></button>
-            <button className={about.dot}></button>
+            <button className={`${about.dot} bounce-in`} id={about.active}></button>
+            <button className={`${about.dot} bounce-in`}></button>
+            <button className={`${about.dot} bounce-in`}></button>
         </div>
     </div>
     )

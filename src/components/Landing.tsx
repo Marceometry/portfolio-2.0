@@ -4,7 +4,7 @@ import landing from '../css/landing.module.scss'
 export default function Landing() {
     return (
         <div className={landing.container}>
-            <nav>
+            <nav className="down-fast">
             <ul>
                 <li>CONTATO</li>
                 <li>PORTFOLIO</li>
@@ -30,7 +30,7 @@ export default function Landing() {
             </nav>
 
             <main>
-            <header>
+            <header className="down">
                 {/* <img src="https://github.com/marceometry.png" alt="Marcelino"/> */}
 
                 <h1>Olá, meu nome é <Green>Marcelino Teixeira</Green>!</h1>
@@ -38,18 +38,18 @@ export default function Landing() {
             </header>
 
             <section>
-                <p> Domino <Green>HTML</Green> e <Green>CSS</Green> e atualmente estou focado em praticar a 
+                <p className="side-appear-reverse"> Domino <Green>HTML</Green> e <Green>CSS</Green> e atualmente estou focado em praticar a 
                 biblioteca JavaScript <Green>React</Green> juntamente do framework <Green>Next.js</Green> </p>
 
-                <img src="/icons/code.svg" alt="</>" />
+                <img className="rotate" src="/icons/code.svg" alt="</>" />
                 
-                <p> Procuro sempre me atentar aos <Green>mínimos detalhes</Green> da interface, pensando sempre na 
+                <p className="side-appear"> Procuro sempre me atentar aos <Green>mínimos detalhes</Green> da interface, pensando sempre na 
                 usabilidade e <Green>experiência</Green> do <Green>usuário</Green>. </p>
             </section>
             </main>
             
             <div id={landing.arrowDown}>
-            <img src="/icons/arrow-down.svg" alt="v" />
+                <img className="bounce" src="/icons/arrow-down.svg" alt="v" />
             </div>
         </div>
     )
