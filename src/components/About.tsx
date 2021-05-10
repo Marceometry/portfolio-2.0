@@ -36,8 +36,8 @@ export default function About() {
     }
     
     return (
-      <div className={`${about.container} ${show && about.show}`}>
-        <h2 className={show && 'up'}>Sobre meus projetos</h2>
+      <div className={`${about.container} ${show ? about.show : ''}`}>
+        <h2 className={show ? 'up' : ''}>Sobre meus projetos</h2>
 
         <main>
             <button onClick={() => setText(currentText - 1)}>
@@ -45,15 +45,15 @@ export default function About() {
             </button>
             
             <div ref={ref} className={about.textContainer}>
-                <p className={`${show && 'focus-in'} ${currentText === 0 && about.active}`}> 
+                <p className={`${show ? 'focus-in' : ''} ${currentText === 0 ? about.active : ''}`}> 
                     Aplicações <Green>responsivas</Green> que se <Green>adaptam</Green> aos variados <Green>tamanhos</Green> de <Green>tela</Green>. 
                 </p>
 
-                <p className={`${show && 'focus-in'} ${currentText === 1 && about.active}`}>
+                <p className={`${show ? 'focus-in' : ''} ${currentText === 1 ? about.active : ''}`}>
                     Atenção aos <Green>detalhes pequenos</Green> do layout, para que nenhum elemento saia do seu <Green>devido lugar</Green>.
                 </p>
 
-                <p className={`${show && 'focus-in'} ${currentText === 2 && about.active}`}>
+                <p className={`${show ? 'focus-in' : ''} ${currentText === 2 ? about.active : ''}`}>
                     <Green>Clean code</Green>, padronização e organização, procurando sempre realizar <Green>boas práticas</Green> no <Green>código</Green>.
                 </p>
             </div>
@@ -65,15 +65,15 @@ export default function About() {
 
         <div ref={dots} className={about.dotsContainer}>
             <button onClick={() => setText(0)} 
-                    className={`${about.dot} ${show && 'bounce-in'} ${currentText === 0 && about.dotActive}`}>
+                    className={`${about.dot} ${show ? 'bounce-in' : ''} ${currentText === 0 ? about.dotActive : ''}`}>
             </button>
 
             <button onClick={() => setText(1)} 
-                    className={`${about.dot} ${show && 'bounce-in'} ${currentText === 1 && about.dotActive}`}>
+                    className={`${about.dot} ${show ? 'bounce-in' : ''} ${currentText === 1 ? about.dotActive : ''}`}>
             </button>
 
             <button onClick={() => setText(2)} 
-                    className={`${about.dot} ${show && 'bounce-in'} ${currentText === 2 && about.dotActive}`}>
+                    className={`${about.dot} ${show ? 'bounce-in' : ''} ${currentText === 2 ? about.dotActive : ''}`}>
             </button>
         </div>
     </div>

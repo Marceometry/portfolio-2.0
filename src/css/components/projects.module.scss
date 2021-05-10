@@ -40,6 +40,10 @@
                     animation-delay: 1s;
                 }
 
+                &.hidden {
+                    display: none;
+                }
+
                 img {
                     width: calc(100% - 1.5rem);
                     height: 11rem;
@@ -66,13 +70,15 @@
                 }
             }
 
-            div:first-child {
+            button {
                 height: fit-content;
+            }
+
+            button:first-child {
                 transform: translate(-3rem, 25%);
             }
 
-            div:last-child {
-                height: fit-content;
+            button:last-child {
                 transform: translate(3rem, 25%);
             }
 
