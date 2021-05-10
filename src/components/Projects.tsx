@@ -36,25 +36,25 @@ export default function Projects() {
                     </Link>
 
                     <div ref={ref} className={css.projects}>
-                        <div className={`${show ? 'swing-in' : ''} ${css.project}`}>
+                        <a className={`${show ? 'swing-in' : ''} ${css.project}`}>
                             <img src="/images/happy.png" alt="Happy" />
                             <span className="down-fast">Happy</span>
-                        </div>
+                        </a>
                         
-                        <div className={`${show ? 'swing-in' : ''} ${css.project}`}>
+                        <a className={`${show ? 'swing-in' : ''} ${css.project}`}>
                             <img src="/images/moveit.png" alt="Happy" />
                             <span className="down-fast">MoveIt</span>
-                        </div>
+                        </a>
                         
-                        <div className={`${show ? 'swing-in' : ''} ${css.project}`}>
+                        <a className={`${show ? 'swing-in' : ''} ${css.project}`}>
                             <img src="/images/podcastr.png" alt="Happy" />
                             <span className="down-fast">Podcastr</span>
-                        </div>
+                        </a>
                         
-                        <div className={`${show ? 'swing-in' : ''} ${css.project}`}>
+                        <a className={`${show ? 'swing-in' : ''} ${css.project}`}>
                             <img src="/images/happy2.png" alt="Happy" />
                             <span className="down-fast">Happy 2.0</span>
-                        </div>
+                        </a>
                     </div>
                 </section>
             </main>
