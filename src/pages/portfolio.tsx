@@ -2,6 +2,8 @@ import Head from 'next/head'
 
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
+import Projects from '../components/Projects'
+import { Green, Purple } from '../components/TextColor'
 
 import css from '../css/portfolio.module.scss'
 
@@ -17,10 +19,27 @@ export default function Home() {
 
                 <main>
                 <header className="down">
-                    <h1></h1>
+                    <h1>Este é o meu <Purple>Portfólio</Purple></h1>
+                    <h2>Confira aqui todos os <Green>meus projetos</Green>.</h2>
                 </header>
+
+                <section>
+                    <p className="side-appear-reverse"> Aqui você pode encontrar projetos de <Green>eventos de programação</Green> como a NLW, porém com funcionalidades
+                    e <Green>recursos a mais</Green> que adicionei. </p>
+
+                    <img className="rotate" src="/icons/code.svg" alt="</>" />
+                    
+                    <p className="side-appear"> Também é possível encontrar <Green>trabalhos</Green> do ensino médio técnico do <Green>IFRS</Green>, assim como 
+                    meus <Green>projetos particulares</Green>. </p>
+                </section>
                 </main>
+
+                <div id={css.arrowDown}>
+                    <img className="bounce" src="/icons/arrow-down.svg" alt="v" />
+                </div>
             </div>
+
+            <Projects />
 
             <Footer />
         </div>

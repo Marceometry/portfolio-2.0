@@ -19,19 +19,20 @@ export default function Footer() {
                         <LinkScroll to='home' smooth={true}><li>Home</li></LinkScroll>
                         <LinkScroll to='about' smooth={true}><li>Sobre</li></LinkScroll>
                         <LinkScroll to='footer' smooth={true}><li>Contato</li></LinkScroll>
-                        <LinkScroll to='projects' smooth={true}><li>Portfolio</li></LinkScroll>
+                        <LinkScroll to='projects' smooth={true}><li>Projetos</li></LinkScroll>
+                        <Link href="/portfolio"><a><li>Portfólio</li></a></Link>
                         <LinkScroll to='technologies' smooth={true}><li>Tecnologias</li></LinkScroll>
                         </>
                     ) : router.pathname === '/portfolio' ? (
                         <>
-                        <Link href='/'><li>Home</li></Link>
+                        <Link href='/'><a><li>Home</li></a></Link>
                         <LinkScroll to='nlw' smooth={true}><li>Next Level Week</li></LinkScroll>
                         <LinkScroll to='mine' smooth={true}><li>Meus Projetos</li></LinkScroll>
                         </>
                     ) : (
                         <>
-                        <Link href='/'><li>Home</li></Link>
-                        <Link href='/portfolio'><li>Portfolio</li></Link>
+                        <Link href='/'><a><li>Home</li></a></Link>
+                        <Link href='/portfolio'><a><li>Portfólio</li></a></Link>
                         </>
                     )}
                 </ul>

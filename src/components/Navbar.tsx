@@ -13,20 +13,20 @@ export default function Navbar() {
                     <>
                     <LinkScroll to='footer' smooth={true}><li>CONTATO</li></LinkScroll>
                     <LinkScroll to='projects' smooth={true}><li>PROJETOS</li></LinkScroll>
-                    <Link href='/portfolio'><li>PORTFOLIO</li></Link>
+                    <Link href='/portfolio'><a><li>PORTFÓLIO</li></a></Link>
                     <LinkScroll to='technologies' smooth={true}><li>TECNOLOGIAS</li></LinkScroll>
                     </>
                 ) : router.pathname === '/portfolio' ? (
                     <>
-                    <Link href='/'><li>HOME</li></Link>
+                    <Link href='/'><a><li>HOME</li></a></Link>
                     <LinkScroll to='footer' smooth={true}><li>CONTATO</li></LinkScroll>
                     <LinkScroll to='nlw' smooth={true}><li>NEXT LEVEL WEEK</li></LinkScroll>
                     <LinkScroll to='mine' smooth={true}><li>MEUS PROJETOS</li></LinkScroll>
                     </>
                 ) : (
                     <>
-                    <Link href='/'><li>HOME</li></Link>
-                    <Link href='/portfolio'><li>PORTFOLIO</li></Link>
+                    <Link href='/'><a><li>HOME</li></a></Link>
+                    <Link href='/portfolio'><a><li>PORTFÓLIO</li></a></Link>
                     </>
                 )}
             </ul>

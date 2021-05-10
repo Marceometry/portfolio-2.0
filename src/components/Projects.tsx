@@ -47,13 +47,13 @@ export default function Projects() {
                         </a>
                         
                         <a className={`${show ? 'swing-in' : ''} ${css.project}`}>
-                            <img src="/images/podcastr.png" alt="Happy" />
-                            <span className="down-fast">Podcastr</span>
+                            <img src="/images/happy2.png" alt="Happy" />
+                            <span className="down-fast">Happy 2.0</span>
                         </a>
                         
                         <a className={`${show ? 'swing-in' : ''} ${css.project}`}>
-                            <img src="/images/happy2.png" alt="Happy" />
-                            <span className="down-fast">Happy 2.0</span>
+                            <img src="/images/podcastr.png" alt="Happy" />
+                            <span className="down-fast">Podcastr</span>
                         </a>
                     </div>
                 </section>
