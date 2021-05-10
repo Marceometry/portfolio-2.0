@@ -1,20 +1,39 @@
-import { Link } from 'react-scroll'
+import Link from 'next/link'
+import { Link as LinkScroll } from 'react-scroll'
 import { Purple } from './TextColor'
 
 import css from '../css/components/footer.module.scss'
+import { useRouter } from 'next/router'
 
 export default function Footer() {
+    const router = useRouter()
+
     return (
         <footer id="footer" className={css.footer}>
             <section>
                 <h4>MENU</h4>
 
                 <ul id={css.menu}>
-                    <Link to='home' smooth={true}><li>Home</li></Link>
-                    <Link to='about' smooth={true}><li>Sobre</li></Link>
-                    <Link to='footer' smooth={true}><li>Contato</li></Link>
-                    <Link to='projects' smooth={true}><li>Portfolio</li></Link>
-                    <Link to='technologies' smooth={true}><li>Tecnologias</li></Link>
+                    {router.pathname === '/' ? (
+                        <>
+                        <LinkScroll to='home' smooth={true}><li>Home</li></LinkScroll>
+                        <LinkScroll to='about' smooth={true}><li>Sobre</li></LinkScroll>
+                        <LinkScroll to='footer' smooth={true}><li>Contato</li></LinkScroll>
+                        <LinkScroll to='projects' smooth={true}><li>Portfolio</li></LinkScroll>
+                        <LinkScroll to='technologies' smooth={true}><li>Tecnologias</li></LinkScroll>
+                        </>
+                    ) : router.pathname === '/portfolio' ? (
+                        <>
+                        <Link href='/'><li>Home</li></Link>
+                        <LinkScroll to='nlw' smooth={true}><li>Next Level Week</li></LinkScroll>
+                        <LinkScroll to='mine' smooth={true}><li>Meus Projetos</li></LinkScroll>
+                        </>
+                    ) : (
+                        <>
+                        <Link href='/'><li>Home</li></Link>
+                        <Link href='/portfolio'><li>Portfolio</li></Link>
+                        </>
+                    )}
                 </ul>
             </section>
 

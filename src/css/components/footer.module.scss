@@ -38,11 +38,12 @@
             }
 
             li {
+                margin-bottom: .5rem;
+                transition: opacity, .1s;
+                cursor: pointer;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                margin-bottom: .5rem;
-                transition: opacity, .1s;
                 
                 img {
                     width: 1.5rem;
