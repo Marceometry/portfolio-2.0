@@ -38,16 +38,6 @@ export default function Projects() {
                         </a>
                         
                         <a className={`${show ? 'swing-in' : ''} ${projects.project}`}>
-                            <img src="/images/moveit.png" alt="Happy" />
-                            <span className="down-fast">MoveIt</span>
-                        </a>
-                        
-                        <a className={`${show ? 'swing-in' : ''} ${projects.project}`}>
-                            <img src="/images/podcastr.png" alt="Happy" />
-                            <span className="down-fast">Podcastr</span>
-                        </a>
-                        
-                        <a className={`${show ? 'swing-in' : ''} ${projects.project}`}>
                             <img src="/images/happy2.png" alt="Happy" />
                             <span className="down-fast">Happy 2.0</span>
                         </a>
@@ -55,6 +45,11 @@ export default function Projects() {
                         <a className={`${show ? 'swing-in' : ''} ${projects.project}`}>
                             <img src="/images/moveit.png" alt="Happy" />
                             <span className="down-fast">MoveIt</span>
+                        </a>
+                        
+                        <a className={`${show ? 'swing-in' : ''} ${projects.project}`}>
+                            <img src="/images/podcastr.png" alt="Happy" />
+                            <span className="down-fast">Podcastr</span>
                         </a>
                     </div>
                 </section>
