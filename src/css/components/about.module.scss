@@ -1,11 +1,16 @@
 .container {
     width: 100vw;
-    padding: 5rem 0;
+    padding: 6rem 0;
+    opacity: 0;
   
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+    &.show {
+        opacity: 1;
+    }
 
     main {
         width: min(80%, 1100px);
@@ -54,7 +59,7 @@
                 animation-delay: .7s;
             }
 
-            &#active {
+            &.dotActive {
                 background: var(--green);
             }
         }

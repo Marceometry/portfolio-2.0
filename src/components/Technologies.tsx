@@ -1,12 +1,33 @@
+import { useState, useRef, useLayoutEffect } from 'react'
 import tech from '../css/components/technologies.module.scss'
 
 export default function Technologies() {
+    const [show, doShow] = useState(false)
+    const ref = useRef(null)
+    
+    useLayoutEffect(() => {
+        const topPos = element => element.getBoundingClientRect().top
+        const elementPos = topPos(ref.current)
+    
+        const onScroll = () => {
+            const scrollPos = window.scrollY + window.innerHeight
+            if (elementPos < scrollPos) {
+                doShow(true)
+            } else {
+                doShow(false)
+            }
+        }
+    
+        window.addEventListener("scroll", onScroll)
+        return () => window.removeEventListener("scroll", onScroll)
+    }, [])
+
     return (
-        <div className={tech.container}>
-            <h2>Tecnologias que já tive contato</h2>
+        <div className={`${tech.container} ${show ? tech.show : ''}`}>
+            <h2 className={show ? 'up' : ''}>Tecnologias que já tive contato</h2>
 
             <main>
-                <div className={tech.card}>
+                <div className={`${show ? 'swing-in' : ''} ${tech.card}`}>
                     <h3>FrontEnd</h3>
                     <hr />
 
@@ -48,9 +69,9 @@ export default function Technologies() {
                     </div>
                 </div>
 
-                <img className={tech.codeImg} src="/icons/code-dark.svg" alt="</>" />
+                <img ref={ref} className={`${show ? 'rotate' : ''} ${tech.codeImg}`} src="/icons/code-dark.svg" alt="</>" />
 
-                <div className={tech.card}>
+                <div className={`${show ? 'swing-in' : ''} ${tech.card}`}>
                     <h3>BackEnd</h3>
                     <hr />
 

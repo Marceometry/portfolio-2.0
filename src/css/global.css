@@ -1,7 +1,5 @@
 :root {
   --background: #202020;
-  --background-2: #383838;
-  --shadow: #585858;
   --text: #DDDDDD;
   --purple: #a32ddf;
   --purple-light: #dd80ff;
@@ -45,6 +43,7 @@ button, a {
   cursor: pointer;
   color: inherit;
   border: none;
+  background: none;
   text-decoration: none;
 }
 

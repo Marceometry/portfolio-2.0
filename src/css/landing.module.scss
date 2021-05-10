@@ -1,6 +1,8 @@
 .container {
   width: 100vw;
   height: 100vh;
+  margin-bottom: 4rem;
+
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -74,6 +76,7 @@
 
       p {
         max-width: 30%;
+        animation-delay: .8s;
         opacity: 0;
 
         &:first-child {
