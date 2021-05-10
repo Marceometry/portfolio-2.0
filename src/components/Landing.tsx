@@ -13,7 +13,7 @@ export default function Landing() {
 
             <ul>
                 <li>
-                <a href="https://github.com/marceometry">
+                <a href="https://github.com/marceometry" target="_blank">
                     <img src="/icons/github.svg" alt="Github" />
                     <span>Marceometry</span>
                 </a>

@@ -41,7 +41,7 @@ export default function About() {
 
         <main>
             <button onClick={() => setText(currentText - 1)}>
-                <ArrowLeft disabled={false} show={show} />
+                <ArrowLeft show={show} />
             </button>
             
             <div ref={ref} className={about.textContainer}>
@@ -59,7 +59,7 @@ export default function About() {
             </div>
 
             <button onClick={() => setText(currentText + 1)}>
-                <ArrowRight  disabled={false} show={show} />
+                <ArrowRight show={show} />
             </button>
         </main>
 
