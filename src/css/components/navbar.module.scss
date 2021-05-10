@@ -1,0 +1,43 @@
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+
+      &:first-child {
+        li {
+          cursor: pointer;
+
+          &:hover {
+            color: var(--purple-light);
+          }
+        }
+      }
+
+      li {
+        margin: 1rem;
+        display: flex;
+        align-items: center;
+        transition: color .2s;
+
+        img {
+          width: 2rem;
+          margin-right: .5rem;
+        }
+
+        a {
+          display: flex;
+          align-items: center;
+          transition: color .2s;
+
+          &:hover {
+            color: var(--green);
+          }
+        }
+      }
+    }
+  }
