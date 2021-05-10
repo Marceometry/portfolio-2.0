@@ -32,30 +32,30 @@ export default function Projects() {
                     <h3 className={show ? 'down' : ''}>Next Level Week (Rocketseat)</h3>
 
                     <div ref={ref} className={projects.projects}>
-                        <div className={`${show ? 'swing-in' : ''} ${projects.project}`}>
+                        <a className={`${show ? 'swing-in' : ''} ${projects.project}`}>
                             <img src="/images/happy.png" alt="Happy" />
                             <span className="down-fast">Happy</span>
-                        </div>
+                        </a>
                         
-                        <div className={`${show ? 'swing-in' : ''} ${projects.project}`}>
+                        <a className={`${show ? 'swing-in' : ''} ${projects.project}`}>
                             <img src="/images/moveit.png" alt="Happy" />
                             <span className="down-fast">MoveIt</span>
-                        </div>
+                        </a>
                         
-                        <div className={`${show ? 'swing-in' : ''} ${projects.project}`}>
+                        <a className={`${show ? 'swing-in' : ''} ${projects.project}`}>
                             <img src="/images/podcastr.png" alt="Happy" />
                             <span className="down-fast">Podcastr</span>
-                        </div>
+                        </a>
                         
-                        <div className={`${show ? 'swing-in' : ''} ${projects.project}`}>
+                        <a className={`${show ? 'swing-in' : ''} ${projects.project}`}>
                             <img src="/images/happy2.png" alt="Happy" />
                             <span className="down-fast">Happy 2.0</span>
-                        </div>
+                        </a>
                         
-                        <div className={`${show ? 'swing-in' : ''} ${projects.project}`}>
+                        <a className={`${show ? 'swing-in' : ''} ${projects.project}`}>
                             <img src="/images/moveit.png" alt="Happy" />
                             <span className="down-fast">MoveIt</span>
-                        </div>
+                        </a>
                     </div>
                 </section>
             </main>
