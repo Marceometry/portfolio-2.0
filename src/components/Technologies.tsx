@@ -33,43 +33,43 @@ export default function Technologies() {
 
                     <div className={tech.technologies}>
                     <div className={tech.technology}>
-                        <img src="/icons/html.svg" alt="" />
+                        <img src="/brands/html.svg" alt="" />
                         <span>HTML</span>
                     </div>
                     
                     <div className={tech.technology}>
-                        <img src="/icons/css.svg" alt="" />
+                        <img src="/brands/css.svg" alt="" />
                         <span>CSS</span>
                     </div>
                     
                     <div className={tech.technology}>
-                        <img src="/icons/js.svg" alt="" />
+                        <img src="/brands/js.svg" alt="" />
                         <span>JavaScript</span>
                     </div>
                     
                     <div className={tech.technology}>
-                        <img src="/icons/ts.svg" alt="" />
+                        <img src="/brands/ts.svg" alt="" />
                         <span>TypeScript</span>
                     </div>
                     
                     <div className={tech.technology}>
-                        <img src="/icons/react.svg" alt="" />
+                        <img src="/brands/react.svg" alt="" />
                         <span>ReactJS</span>
                     </div>
                     
                     <div className={tech.technology}>
-                        <img src="/icons/next.svg" alt="" />
+                        <img src="/brands/next.svg" alt="" />
                         <span>Next.js</span>
                     </div>
                     
                     <div className={tech.technology}>
-                        <img src="/icons/sass.svg" alt="" />
+                        <img src="/brands/sass.svg" alt="" />
                         <span>Sass</span>
                     </div>
                     </div>
                 </div>
 
-                <img ref={ref} className={`${show ? 'rotate' : ''} ${tech.codeImg}`} src="/icons/code-dark.svg" alt="</>" />
+                <img ref={ref} className={`${show ? 'rotate' : ''} ${tech.codeImg}`} src="/icons/code-white.svg" alt="</>" />
 
                 <div className={`${show ? 'swing-in' : ''} ${tech.card}`}>
                     <h3>BackEnd</h3>
@@ -77,17 +77,17 @@ export default function Technologies() {
 
                     <div className={tech.technologies}>
                     <div className={tech.technology}>
-                        <img src="/icons/node.svg" alt="" />
+                        <img src="/brands/node.svg" alt="" />
                         <span>Node.js</span>
                     </div>
                     
                     <div className={tech.technology}>
-                        <img src="/icons/mongo.svg" alt="" />
+                        <img src="/brands/mongo.svg" alt="" />
                         <span>MongoDB</span>
                     </div>
                     
                     <div className={tech.technology}>
-                        <img src="/icons/axios.svg" alt="" />
+                        <img src="/brands/axios.svg" alt="" />
                         <span>Axios</span>
                     </div>
                     

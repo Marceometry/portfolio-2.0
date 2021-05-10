@@ -14,7 +14,7 @@ export default function Landing() {
             <ul>
                 <li>
                 <a href="https://github.com/marceometry" target="_blank">
-                    <img src="/icons/github.svg" alt="Github" />
+                    <img src="/brands/github.svg" alt="Github" />
                     <span>Marceometry</span>
                 </a>
                 </li>
@@ -23,7 +23,7 @@ export default function Landing() {
                 <span>marceometry@gmail.com</span>
                 </li>
                 <li>
-                <img src="/icons/whatsapp.svg" alt="Whatsapp" />
+                <img src="/brands/whatsapp.svg" alt="Whatsapp" />
                 <span>51 99579-4033</span>
                 </li>
             </ul>

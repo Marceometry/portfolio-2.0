@@ -1,5 +1,4 @@
 import { useState, useRef, useLayoutEffect } from "react";
-import { ArrowLeft, ArrowRight } from "../../public/icons/svgArrows";
 import projects from '../css/components/projects.module.scss'
 
 export default function Projects() {
@@ -50,11 +49,6 @@ export default function Projects() {
                         <div className={`${show ? 'swing-in' : ''} ${projects.project}`}>
                             <img src="/images/happy2.png" alt="Happy" />
                             <span className="down-fast">Happy 2.0</span>
-                        </div>
-                        
-                        <div className={`${show ? 'swing-in' : ''} ${projects.project}`}>
-                            <img src="/images/moveit.png" alt="Happy" />
-                            <span className="down-fast">MoveIt</span>
                         </div>
                     </div>
                 </section>
