@@ -23,11 +23,11 @@ export default function Technologies() {
     }, [])
 
     return (
-        <div className={`${tech.container} ${show ? tech.show : ''}`}>
-            <h2 className={show ? 'up' : ''}>Tecnologias que já tive contato</h2>
+        <div className={`${tech.container} ${show && tech.show}`}>
+            <h2 className={show && 'up'}>Tecnologias que já tive contato</h2>
 
             <main>
-                <div className={`${show ? 'swing-in' : ''} ${tech.card}`}>
+                <div className={`${show && 'swing-in'} ${tech.card}`}>
                     <h3>FrontEnd</h3>
                     <hr />
 
@@ -69,9 +69,9 @@ export default function Technologies() {
                     </div>
                 </div>
 
-                <img ref={ref} className={`${show ? 'rotate' : ''} ${tech.codeImg}`} src="/icons/code-dark.svg" alt="</>" />
+                <img ref={ref} className={`${show && 'rotate'} ${tech.codeImg}`} src="/icons/code-dark.svg" alt="</>" />
 
-                <div className={`${show ? 'swing-in' : ''} ${tech.card}`}>
+                <div className={`${show && 'swing-in'} ${tech.card}`}>
                     <h3>BackEnd</h3>
                     <hr />
 

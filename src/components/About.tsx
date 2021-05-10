@@ -26,28 +26,18 @@ export default function About() {
         return () => window.removeEventListener("scroll", onScroll)
     }, [])
 
-    function setText(index) {
-        const p = ref.current.querySelectorAll('p')
-        const dot = dots.current.querySelectorAll('button')
-
-        for (let i = 0; i < p.length; i++) {
-            p[i].classList.remove(`${about.active}`)
-            dot[i].classList.remove(`${about.dotActive}`)
-        }
-
+    function setText(index: number) {
         if (index < 0) {
             index = 2
         } else if (index > 2) {
             index = 0
         }
         setCurrentText(index)
-        p[index].classList.add(`${about.active}`)
-        dot[index].classList.add(`${about.dotActive}`)
     }
     
     return (
-      <div className={`${about.container} ${show ? about.show : ''}`}>
-        <h2 className={show ? 'up' : ''}>Sobre meus projetos</h2>
+      <div className={`${about.container} ${show && about.show}`}>
+        <h2 className={show && 'up'}>Sobre meus projetos</h2>
 
         <main>
             <button onClick={() => setText(currentText - 1)}>
@@ -55,11 +45,17 @@ export default function About() {
             </button>
             
             <div ref={ref} className={about.textContainer}>
-            <p className={`${show ? 'focus-in' : ''} ${about.active}`}> Aplicações <Green>responsivas</Green> que se <Green>adaptam</Green> aos variados <Green>tamanhos</Green> de <Green>tela</Green>. </p>
+                <p className={`${show && 'focus-in'} ${currentText === 0 && about.active}`}> 
+                    Aplicações <Green>responsivas</Green> que se <Green>adaptam</Green> aos variados <Green>tamanhos</Green> de <Green>tela</Green>. 
+                </p>
 
-            <p className={show ? 'focus-in' : ''}> Atenção aos <Green>detalhes pequenos</Green> do layout, para que nenhum elemento saia do seu <Green>devido lugar</Green>. </p>
+                <p className={`${show && 'focus-in'} ${currentText === 1 && about.active}`}>
+                    Atenção aos <Green>detalhes pequenos</Green> do layout, para que nenhum elemento saia do seu <Green>devido lugar</Green>.
+                </p>
 
-            <p className={show ? 'focus-in' : ''}> <Green>Clean code</Green>, padronização e organização, procurando sempre realizar <Green>boas práticas</Green> no <Green>código</Green>. </p>
+                <p className={`${show && 'focus-in'} ${currentText === 2 && about.active}`}>
+                    <Green>Clean code</Green>, padronização e organização, procurando sempre realizar <Green>boas práticas</Green> no <Green>código</Green>.
+                </p>
             </div>
 
             <button onClick={() => setText(currentText + 1)}>
@@ -68,9 +64,17 @@ export default function About() {
         </main>
 
         <div ref={dots} className={about.dotsContainer}>
-            <button onClick={() => setText(0)} className={`${about.dot} ${show ? 'bounce-in' : ''} ${about.dotActive}`}></button>
-            <button onClick={() => setText(1)} className={`${about.dot} ${show ? 'bounce-in' : ''}`}></button>
-            <button onClick={() => setText(2)} className={`${about.dot} ${show ? 'bounce-in' : ''}`}></button>
+            <button onClick={() => setText(0)} 
+                    className={`${about.dot} ${show && 'bounce-in'} ${currentText === 0 && about.dotActive}`}>
+            </button>
+
+            <button onClick={() => setText(1)} 
+                    className={`${about.dot} ${show && 'bounce-in'} ${currentText === 1 && about.dotActive}`}>
+            </button>
+
+            <button onClick={() => setText(2)} 
+                    className={`${about.dot} ${show && 'bounce-in'} ${currentText === 2 && about.dotActive}`}>
+            </button>
         </div>
     </div>
     )
