@@ -13,6 +13,7 @@ export default function Navbar() {
                     <>
                     <LinkScroll to='footer' smooth={true}><li>CONTATO</li></LinkScroll>
                     <LinkScroll to='projects' smooth={true}><li>PROJETOS</li></LinkScroll>
+                    <Link href='/portfolio'><li>PORTFOLIO</li></Link>
                     <LinkScroll to='technologies' smooth={true}><li>TECNOLOGIAS</li></LinkScroll>
                     </>
                 ) : router.pathname === '/portfolio' ? (
