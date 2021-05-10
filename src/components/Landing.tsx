@@ -1,30 +1,11 @@
 import { Green, Purple } from "./TextColor";
-import { Link } from 'react-scroll'
-import landing from '../css/landing.module.scss'
+import Navbar from "./Navbar";
+import css from '../css/landing.module.scss'
 
 export default function Landing() {
     return (
-        <div id="home" className={landing.container}>
-            <nav className="down-fast">
-            <ul>
-                <Link to='footer' smooth={true}><li>CONTATO</li></Link>
-                <Link to='projects' smooth={true}><li>PORTFOLIO</li></Link>
-                <Link to='technologies' smooth={true}><li>TECNOLOGIAS</li></Link>
-            </ul>
-
-            <ul>
-                <li>
-                    <a href="https://github.com/marceometry" target="_blank">
-                    <img src="/brands/github.svg" alt="Github" />
-                    <span>Marceometry</span>
-                    </a>
-                </li>
-                <li>
-                    <img src="/icons/envelope.svg" alt="Email" />
-                    <span>marceometry@gmail.com</span>
-                </li>
-            </ul>
-            </nav>
+        <div id="home" className={css.container}>
+            <Navbar />
 
             <main>
             <header className="down">
@@ -43,7 +24,7 @@ export default function Landing() {
             </section>
             </main>
             
-            <div id={landing.arrowDown}>
+            <div id={css.arrowDown}>
                 <img className="bounce" src="/icons/arrow-down.svg" alt="v" />
             </div>
         </div>

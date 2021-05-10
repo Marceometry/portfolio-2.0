@@ -1,6 +1,6 @@
 import { ArrowLeft, ArrowRight } from '../../public/icons/svgArrows'
 import { Green } from './TextColor'
-import about from '../css/components/about.module.scss'
+import css from '../css/components/about.module.scss'
 import { useState, useRef, useLayoutEffect } from 'react'
 
 export default function About() {
@@ -36,7 +36,7 @@ export default function About() {
     }
     
     return (
-      <div id="about" className={`${about.container} ${show ? about.show : ''}`}>
+      <div id="about" className={`${css.container} ${show ? css.show : ''}`}>
         <h2 className={show ? 'up' : ''}>Sobre meus projetos</h2>
 
         <main>
@@ -44,16 +44,16 @@ export default function About() {
                 <ArrowLeft show={show} />
             </button>
             
-            <div ref={ref} className={about.textContainer}>
-                <p className={`${show ? 'focus-in' : ''} ${currentText === 0 ? about.active : ''}`}> 
+            <div ref={ref} className={css.textContainer}>
+                <p className={`${show ? 'focus-in' : ''} ${currentText === 0 ? css.active : ''}`}> 
                     Aplicações <Green>responsivas</Green> que se <Green>adaptam</Green> aos variados <Green>tamanhos</Green> de <Green>tela</Green>. 
                 </p>
 
-                <p className={`${show ? 'focus-in' : ''} ${currentText === 1 ? about.active : ''}`}>
+                <p className={`${show ? 'focus-in' : ''} ${currentText === 1 ? css.active : ''}`}>
                     Atenção aos <Green>detalhes pequenos</Green> do layout, para que nenhum elemento saia do seu <Green>devido lugar</Green>.
                 </p>
 
-                <p className={`${show ? 'focus-in' : ''} ${currentText === 2 ? about.active : ''}`}>
+                <p className={`${show ? 'focus-in' : ''} ${currentText === 2 ? css.active : ''}`}>
                     <Green>Clean code</Green>, padronização e organização, procurando sempre realizar <Green>boas práticas</Green> no <Green>código</Green>.
                 </p>
             </div>
@@ -63,17 +63,17 @@ export default function About() {
             </button>
         </main>
 
-        <div ref={dots} className={about.dotsContainer}>
+        <div ref={dots} className={css.dotsContainer}>
             <button onClick={() => setText(0)} 
-                    className={`${about.dot} ${show ? 'bounce-in' : ''} ${currentText === 0 ? about.dotActive : ''}`}>
+                    className={`${css.dot} ${show ? 'bounce-in' : ''} ${currentText === 0 ? css.dotActive : ''}`}>
             </button>
 
             <button onClick={() => setText(1)} 
-                    className={`${about.dot} ${show ? 'bounce-in' : ''} ${currentText === 1 ? about.dotActive : ''}`}>
+                    className={`${css.dot} ${show ? 'bounce-in' : ''} ${currentText === 1 ? css.dotActive : ''}`}>
             </button>
 
             <button onClick={() => setText(2)} 
-                    className={`${about.dot} ${show ? 'bounce-in' : ''} ${currentText === 2 ? about.dotActive : ''}`}>
+                    className={`${css.dot} ${show ? 'bounce-in' : ''} ${currentText === 2 ? css.dotActive : ''}`}>
             </button>
         </div>
     </div>
