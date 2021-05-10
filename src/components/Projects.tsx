@@ -23,7 +23,7 @@ export default function Projects() {
     }, [])
 
     return (
-        <div className={`${projects.container} ${show ? projects.show : ''}`}>
+        <div id="projects" className={`${projects.container} ${show ? projects.show : ''}`}>
             <h2 className={show ? 'up' : ''}>Projetos</h2>
 
             <main>

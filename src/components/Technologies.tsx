@@ -23,7 +23,7 @@ export default function Technologies() {
     }, [])
 
     return (
-        <div className={`${tech.container} ${show ? tech.show : ''}`}>
+        <div id="technologies" className={`${tech.container} ${show ? tech.show : ''}`}>
             <h2 className={show ? 'up' : ''}>Tecnologias que já tive contato</h2>
 
             <main>

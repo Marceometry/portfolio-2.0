@@ -1,38 +1,33 @@
 import { Green, Purple } from "./TextColor";
+import { Link } from 'react-scroll'
 import landing from '../css/landing.module.scss'
 
 export default function Landing() {
     return (
-        <div className={landing.container}>
+        <div id="home" className={landing.container}>
             <nav className="down-fast">
             <ul>
-                <li>CONTATO</li>
-                <li>PORTFOLIO</li>
-                <li>TECNOLOGIAS</li>
+                <Link to='footer' smooth={true}><li>CONTATO</li></Link>
+                <Link to='projects' smooth={true}><li>PORTFOLIO</li></Link>
+                <Link to='technologies' smooth={true}><li>TECNOLOGIAS</li></Link>
             </ul>
 
             <ul>
                 <li>
-                <a href="https://github.com/marceometry" target="_blank">
+                    <a href="https://github.com/marceometry" target="_blank">
                     <img src="/brands/github.svg" alt="Github" />
                     <span>Marceometry</span>
-                </a>
+                    </a>
                 </li>
                 <li>
-                <img src="/icons/envelope.svg" alt="Email" />
-                <span>marceometry@gmail.com</span>
-                </li>
-                <li>
-                <img src="/brands/whatsapp.svg" alt="Whatsapp" />
-                <span>51 99579-4033</span>
+                    <img src="/icons/envelope.svg" alt="Email" />
+                    <span>marceometry@gmail.com</span>
                 </li>
             </ul>
             </nav>
 
             <main>
             <header className="down">
-                {/* <img src="https://github.com/marceometry.png" alt="Marcelino"/> */}
-
                 <h1>Olá, meu nome é <Green>Marcelino Teixeira</Green>!</h1>
                 <h2>Sou <Purple>Desenvolvedor FrontEnd</Purple>.</h2>
             </header>

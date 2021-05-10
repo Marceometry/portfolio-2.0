@@ -36,7 +36,7 @@ export default function About() {
     }
     
     return (
-      <div className={`${about.container} ${show ? about.show : ''}`}>
+      <div id="about" className={`${about.container} ${show ? about.show : ''}`}>
         <h2 className={show ? 'up' : ''}>Sobre meus projetos</h2>
 
         <main>
