@@ -14,10 +14,11 @@
     
     main {
         width: min(80%, 1100px);
-        position: relative;
         margin-top: 4rem;
 
         section {
+            position: relative;
+            
             &:not(:first-child) {
                 margin-top: 3rem;
             }
@@ -46,6 +47,7 @@
                 position: relative;
                 text-align: center;
                 cursor: pointer;
+                animation-delay: .5s;
 
                 &:hover span {
                     display: flex;

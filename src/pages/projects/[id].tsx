@@ -34,25 +34,23 @@ export default function Project({ project }: ProjectProps) {
                         <h3 className="side-appear-reverse">Descrição do Projeto</h3>
                         <hr className="focus-in" />
 
-                        <p className="swing-in">{project.details}</p>
+                        <p className="swing-in">{project.description}</p>
                     </section>
                     
-                    <section>
-                        <h3 className="side-appear-reverse">Funcionalidades Adicionadas</h3>
-                        <hr className="focus-in" />
+                    {project.features && (
+                        <section>
+                            <h3 className="side-appear-reverse">Funcionalidades Adicionadas</h3>
+                            <hr className="focus-in" />
 
-                        <ul>
-                            <li className="swing-in">
-                                Exemplo de funcionalidade que eu adicionei que faz tal e tal coisa blá blá blá.
-                            </li>
-                            <li className="swing-in">
-                                Exemplo de funcionalidade que eu adicionei que faz tal e tal coisa blá blá blá.
-                            </li>
-                            <li className="swing-in">
-                                Exemplo de funcionalidade que eu adicionei que faz tal e tal coisa blá blá blá.
-                            </li>
-                        </ul>
-                    </section>
+                            <ul>
+                                {project.features.map(feature => (
+                                    <li className="swing-in">
+                                        {feature}
+                                    </li>
+                                ))}
+                            </ul>
+                        </section>
+                    )}
                     
                     <section>
                         <h3 className="side-appear-reverse">Links:</h3>
@@ -80,11 +78,12 @@ export default function Project({ project }: ProjectProps) {
 }
 
 type Project = {
-  _id: string
+  id: string
   name: string
-  details: string
+  description: string
   img: string
   technologies: string[]
+  features: string[]
   githubLink: string
   designLink: string
   webLink: string
@@ -94,7 +93,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const { data } = await api.get('/api/findProjects')
 
   const paths = data.map((project: Project) => ({
-    params: { id: project._id },
+    params: { id: project.id },
   }))
 
   return { paths, fallback: false }

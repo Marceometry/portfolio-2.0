@@ -8,7 +8,7 @@ type ProjectsProps = {
 }
 
 type Project = {
-  _id: string
+  id: string
   name: string
   details: string
   origin: string
@@ -57,8 +57,8 @@ export default function Projects({ inHomePage, projects }: ProjectsProps) {
                     <div className={css.projects}>
                         {projects.map(project => (
                             <>
-                            {project.origin === 'Projeto da Rocketseat' && (
-                            <Link href={`/projects/${project._id}`} key={project._id}>
+                            {project.origin === 'nlw' && (
+                            <Link href={`/projects/${project.id}`} key={project.id}>
                             <a className={`${show ? 'swing-in' : ''} ${css.project}`}>
                                 <img src={`/images/${project.img}`} alt={project.name} />
                                 <span className="down-fast">{project.name}</span>
@@ -81,8 +81,8 @@ export default function Projects({ inHomePage, projects }: ProjectsProps) {
                     <div className={css.projects}>
                         {projects.map(project => (
                             <>
-                            {project.origin === 'Projeto da Rocketseat' && (
-                            <Link href={`/projects/${project._id}`} key={project._id}>
+                            {project.origin === 'nlw' && (
+                            <Link href={`/projects/${project.id}`} key={project.id}>
                             <a className={`${show ? 'swing-in' : ''} ${css.project}`}>
                                 <img src={`/images/${project.img}`} alt={project.name} />
                                 <span className="down-fast">{project.name}</span>
@@ -93,7 +93,7 @@ export default function Projects({ inHomePage, projects }: ProjectsProps) {
                     </div>
                 </section>
 
-                <section>
+                {/* <section>
                     <h3 className={show ? 'down' : ''}>Trabalhos do IFRS</h3>
                     
                     {inHomePage && (
@@ -105,8 +105,8 @@ export default function Projects({ inHomePage, projects }: ProjectsProps) {
                     <div className={css.projects}>
                         {projects.map(project => (
                             <>
-                            {project.origin === 'Projeto da Rocketseat' && (
-                            <Link href={`/projects/${project._id}`} key={project._id}>
+                            {project.origin === 'nlw' && (
+                            <Link href={`/projects/${project.id}`} key={project.id}>
                             <a className={`${show ? 'swing-in' : ''} ${css.project}`}>
                                 <img src={`/images/${project.img}`} alt={project.name} />
                                 <span className="down-fast">{project.name}</span>
@@ -115,7 +115,7 @@ export default function Projects({ inHomePage, projects }: ProjectsProps) {
                             </>
                         ))}
                     </div>
-                </section>
+                </section> */}
             </main>
         </div>
     )

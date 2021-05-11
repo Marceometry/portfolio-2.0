@@ -1,4 +1,3 @@
-import { ObjectID } from 'mongodb'
 import connect from "../../../services/database";
 
 export default async function FindOneProject(req, res) {
@@ -11,7 +10,7 @@ export default async function FindOneProject(req, res) {
         }
 
         const { db } = await connect()
-        const response = await db.collection('Projects').findOne({ "_id": new ObjectID(id) })
+        const response = await db.collection('Projects').findOne({ id: id })
 
         if (!response) {
             res.status(400).json({ error: "Project not found" })

@@ -53,7 +53,7 @@ export default function Portfolio({ projects }: PortfolioProps) {
 }
 
 type Project = {
-  _id: string
+  id: string
   name: string
   details: string
   origin: string
@@ -68,8 +68,6 @@ export const getStaticProps: GetStaticProps = async () => {
     const { data } = await api.get('/api/findProjects')
 
     const projects = data
-
-    console.log(projects)
 
     return {
         props: { projects },
