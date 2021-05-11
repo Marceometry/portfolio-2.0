@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import About from '../components/About'
 import Technologies from '../components/Technologies'
-import Projects from '../components/Projects'
+import Projects from '../components/ProjectsContainer'
 import Footer from '../components/Footer'
 import { Green, Purple } from '../components/TextColor'
 
@@ -44,7 +44,7 @@ export default function Home() {
 
       <Technologies />
 
-      <Projects />
+      <Projects inHomePage={true} />
 
       <Footer />
     </div>

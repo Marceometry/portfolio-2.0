@@ -1,13 +1,15 @@
+import { GetStaticProps } from 'next'
 import Head from 'next/head'
 
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
-import Projects from '../components/Projects'
+import Projects from '../components/ProjectsContainer'
 import { Green, Purple } from '../components/TextColor'
+import { api } from '../services/api'
 
 import css from '../css/portfolio.module.scss'
 
-export default function Home() {
+export default function Home({ projects }) {
     return (
         <div>
             <Head>
@@ -39,9 +41,22 @@ export default function Home() {
                 </div>
             </div>
 
-            <Projects />
+            <Projects inHomePage={false} projects={projects} />
 
             <Footer />
         </div>
     )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+    const { data } = await api.get('/api/findProjects')
+
+    const projects = data
+
+    console.log(projects)
+
+    return {
+        props: { projects },
+        revalidate: 60 * 60 * 8
+    }
 }
