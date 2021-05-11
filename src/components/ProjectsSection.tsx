@@ -11,7 +11,7 @@ export function AllProjects({ show, projects }) {
                     {projects.map(project => (
                         <>
                         {project.origin === 'Projeto da Rocketseat' && (
-                        <Link href={`/projects/nome-do-projeto`} key={project.id}>
+                        <Link href={`/projects/${project.id}`} key={project.id}>
                         <a className={`${show ? 'swing-in' : ''} ${css.project}`}>
                             <img src={`/images/${project.img}`} alt={project.name} />
                             <span className="down-fast">{project.name}</span>
@@ -29,7 +29,7 @@ export function AllProjects({ show, projects }) {
                     {projects.map(project => (
                         <>
                         {project.origin === 'Projeto da Rocketseat' && (
-                        <Link href={`/projects/nome-do-projeto`} key={project.id}>
+                        <Link href={`/projects/${project.id}`} key={project.id}>
                         <a className={`${show ? 'swing-in' : ''} ${css.project}`}>
                             <img src={`/images/${project.img}`} alt={project.name} />
                             <span className="down-fast">{project.name}</span>
@@ -47,7 +47,7 @@ export function AllProjects({ show, projects }) {
                     {projects.map(project => (
                         <>
                         {project.origin === 'Projeto da Rocketseat' && (
-                        <Link href={`/projects/nome-do-projeto`} key={project.id}>
+                        <Link href={`/projects/${project.id}`} key={project.id}>
                         <a className={`${show ? 'swing-in' : ''} ${css.project}`}>
                             <img src={`/images/${project.img}`} alt={project.name} />
                             <span className="down-fast">{project.name}</span>

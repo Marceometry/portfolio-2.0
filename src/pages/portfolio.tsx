@@ -3,13 +3,17 @@ import Head from 'next/head'
 
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
-import Projects from '../components/ProjectsContainer'
+import ProjectsContainer from '../components/ProjectsContainer'
 import { Green, Purple } from '../components/TextColor'
 import { api } from '../services/api'
 
 import css from '../css/portfolio.module.scss'
 
-export default function Home({ projects }) {
+type PortfolioProps = {
+    projects: Project[]
+}
+
+export default function Portfolio({ projects }: PortfolioProps) {
     return (
         <div>
             <Head>
@@ -41,11 +45,22 @@ export default function Home({ projects }) {
                 </div>
             </div>
 
-            <Projects inHomePage={false} projects={projects} />
+            <ProjectsContainer inHomePage={false} projects={projects} />
 
             <Footer />
         </div>
     )
+}
+
+type Project = {
+  _id: string
+  name: string
+  details: string
+  img: string
+  technologies: string[]
+  githubLink: string
+  designLink: string
+  webLink: string
 }
 
 export const getStaticProps: GetStaticProps = async () => {

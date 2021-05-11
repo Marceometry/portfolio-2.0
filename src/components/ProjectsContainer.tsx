@@ -2,7 +2,7 @@ import { useState, useRef, useLayoutEffect } from "react";
 import { AllProjects, MainProjects } from './ProjectsSection'
 import css from '../css/components/projects.module.scss'
 
-export default function Projects({ inHomePage, projects }) {
+export default function ProjectsContainer({ inHomePage, projects }) {
     const [show, doShow] = useState(false)
     const ref = useRef(null)
     

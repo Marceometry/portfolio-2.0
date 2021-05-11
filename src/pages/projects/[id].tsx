@@ -1,15 +1,21 @@
+import { GetStaticPaths, GetStaticProps } from "next"
 import Head from "next/head"
 import React from "react"
 import Footer from "../../components/Footer"
 import Navbar from "../../components/Navbar"
 
 import css from '../../css/project.module.scss'
+import { api } from "../../services/api"
 
-export default function Project() {
+type ProjectProps = {
+    project: Project
+}
+
+export default function Project({ project }: ProjectProps) {
     return (
         <div>
             <Head>
-                <title>Marcelino | Nome do Projeto</title>
+                <title>Marcelino | {project.name}</title>
             </Head>
 
             <div className={css.container}>
@@ -18,23 +24,17 @@ export default function Project() {
 
                 <main>
                 <header className="down">
-                    <h1>Nome do Projeto</h1>
+                    <h1>{project.name}</h1>
                 </header>
 
-                <img className="focus-in" src="/images/portfolio2.png" alt="Capa do Projeto" />
+                <img className="focus-in" src={`/images/${project.img}`} alt="Capa do Projeto" />
 
                 <div>
                     <section>
                         <h3 className="side-appear-reverse">Descrição do Projeto</h3>
                         <hr className="focus-in" />
 
-                        <p className="swing-in">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula 
-                        tortor maximus mauris venenatis scelerisque. Nulla tristique semper lectus vitae facilisis. Nunc sodales 
-                        orci libero, in ultrices nisi euismod at. Proin vel erat mauris. Etiam lorem neque, tempor in ante lobortis, 
-                        ultricies sagittis ipsum. Praesent non sem id mauris molestie pharetra nec at nunc. Orci varius natoque penatibus 
-                        et magnis dis parturient montes, nascetur ridiculus mus. Praesent sit amet ex turpis. Morbi congue lorem a nisi sollicit
-                        udin pellentesque. Mauris ac mattis risus. Quisque sit amet lorem ut quam pretium viverra vel eu metus. Nullam eu lacinia risus.
-                        </p>
+                        <p className="swing-in">{project.details}</p>
                     </section>
                     
                     <section>
@@ -71,4 +71,36 @@ export default function Project() {
             <Footer />
         </div>
     )
+}
+
+type Project = {
+  _id: string
+  name: string
+  details: string
+  img: string
+  technologies: string[]
+  githubLink: string
+  designLink: string
+  webLink: string
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const { data } = await api.get('/api/findProjects')
+
+  const paths = data.map((project: Project) => ({
+    params: { id: project._id },
+  }))
+
+  return { paths, fallback: false }
+}
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const { data } = await api.get(`/api/projects/${params.id}`)
+
+  const project = data
+
+  return {
+    props: { project },
+    revalidate: 60 * 60 * 24
+  }
 }
