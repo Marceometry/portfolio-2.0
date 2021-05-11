@@ -47,6 +47,15 @@ button, a {
   text-decoration: none;
 }
 
+#nprogress {
+  position: relative;
+  z-index: 999;
+}
+
+#nprogress .bar {
+  background: var(--purple);
+  height: 3px;
+}
 
 /* responsive fonts */
 
