@@ -59,9 +59,15 @@ export default function Project({ project }: ProjectProps) {
                         <hr className="focus-in" />
 
                         <ul id={css.links}>
-                            <a><li className="swing-in"> <img src="/brands/github.svg" alt="" /> Repositório no Github </li></a>
-                            <a><li className="swing-in"> <img src="/brands/figma.svg" alt="" /> Design no Figma </li></a>
-                            <a><li className="swing-in"> <img src="/icons/globe.svg" alt="" /> Acessar na web </li></a>
+                            <a href={project.githubLink} target="_blank"><li className="swing-in"> <img src="/brands/github.svg" alt="" /> Repositório no Github </li></a>
+
+                            {project.designLink && (
+                                <a href={project.designLink} target="_blank"><li className="swing-in"> <img src="/brands/figma.svg" alt="" /> Design no Figma </li></a>
+                            )}
+                            
+                            {project.webLink && (
+                                <a href={project.webLink} target="_blank"><li className="swing-in"> <img src="/icons/globe.svg" alt="" /> Acessar na web </li></a>
+                            )}
                         </ul>
                     </section>
                 </div>

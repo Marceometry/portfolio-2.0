@@ -2,13 +2,19 @@ import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import About from '../components/About'
 import Technologies from '../components/Technologies'
-import ProjectsContainer from '../components/ProjectsContainer'
+import Projects from '../components/Projects'
 import Footer from '../components/Footer'
 import { Green, Purple } from '../components/TextColor'
 
 import css from '../css/landing.module.scss'
+import { GetStaticProps } from 'next'
+import { api } from '../services/api'
 
-export default function Home() {
+type HomeProps = {
+  projects: Project[]
+}
+
+export default function Home({ projects }: HomeProps) {
   return (
     <div>
       <Head>
@@ -44,9 +50,34 @@ export default function Home() {
 
       <Technologies />
 
-      <ProjectsContainer inHomePage={true} projects={null} />
+      <Projects inHomePage={true} projects={projects} />
 
       <Footer />
     </div>
   )
+}
+
+type Project = {
+  _id: string
+  name: string
+  details: string
+  origin: string
+  img: string
+  technologies: string[]
+  githubLink: string
+  designLink: string
+  webLink: string
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+    const { data } = await api.get('/api/findProjects')
+
+    const projects = data
+
+    console.log(projects)
+
+    return {
+        props: { projects },
+        revalidate: 60 * 60 * 8
+    }
 }

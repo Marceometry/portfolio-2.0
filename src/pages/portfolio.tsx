@@ -3,7 +3,7 @@ import Head from 'next/head'
 
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
-import ProjectsContainer from '../components/ProjectsContainer'
+import Projects from '../components/Projects'
 import { Green, Purple } from '../components/TextColor'
 import { api } from '../services/api'
 
@@ -45,7 +45,7 @@ export default function Portfolio({ projects }: PortfolioProps) {
                 </div>
             </div>
 
-            <ProjectsContainer inHomePage={false} projects={projects} />
+            <Projects inHomePage={false} projects={projects} />
 
             <Footer />
         </div>
@@ -56,6 +56,7 @@ type Project = {
   _id: string
   name: string
   details: string
+  origin: string
   img: string
   technologies: string[]
   githubLink: string
