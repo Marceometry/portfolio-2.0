@@ -47,6 +47,25 @@ button, a {
   text-decoration: none;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--purple);
+  border-radius: 8px;
+  transition: .2s;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: var(--green);
+}
+
 #nprogress {
   position: relative;
   z-index: 999;
