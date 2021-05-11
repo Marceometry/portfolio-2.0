@@ -17,14 +17,20 @@
         position: relative;
         margin-top: 4rem;
 
-        section > a {
-            transition: color, .2s;
-            position: absolute;
-            right: .5rem;
-            top: .75rem;
+        section {
+            &:not(:first-child) {
+                margin-top: 3rem;
+            }
 
-            &:hover {
-                color: var(--green);
+            & > a {
+                transition: color, .2s;
+                position: absolute;
+                right: .5rem;
+                top: .75rem;
+
+                &:hover {
+                    color: var(--green);
+                }
             }
         }
 

@@ -31,29 +31,68 @@ export default function Projects() {
                 <section>
                     <h3 className={show ? 'down' : ''}>Next Level Week (Rocketseat)</h3>
 
-                    <Link href="/portfolio">
+                    {/* <Link href="/portfolio">
                         <a>Ver mais</a>
-                    </Link>
+                    </Link> */}
 
                     <div ref={ref} className={css.projects}>
-                        <a className={`${show ? 'swing-in' : ''} ${css.project}`}>
-                            <img src="/images/happy.png" alt="Happy" />
-                            <span className="down-fast">Happy</span>
-                        </a>
+                        <Link href="/projects/nome-do-projeto">
+                            <a className={`${show ? 'swing-in' : ''} ${css.project}`}>
+                                <img src="/images/happy.png" alt="Happy" />
+                                <span className="down-fast">Happy</span>
+                            </a>
+                        </Link>
                         
                         <a className={`${show ? 'swing-in' : ''} ${css.project}`}>
-                            <img src="/images/moveit.png" alt="Happy" />
+                            <img src="/images/moveit.png" alt="MoveIt" />
                             <span className="down-fast">MoveIt</span>
                         </a>
                         
                         <a className={`${show ? 'swing-in' : ''} ${css.project}`}>
-                            <img src="/images/happy2.png" alt="Happy" />
+                            <img src="/images/happy2.png" alt="Happy 2.0" />
                             <span className="down-fast">Happy 2.0</span>
                         </a>
                         
                         <a className={`${show ? 'swing-in' : ''} ${css.project}`}>
-                            <img src="/images/podcastr.png" alt="Happy" />
+                            <img src="/images/podcastr.png" alt="Podcastr" />
                             <span className="down-fast">Podcastr</span>
+                        </a>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 className={show ? 'down' : ''}>Meus Projetos</h3>
+
+                    <div className={css.projects}>
+                        <a className={`${show ? 'swing-in' : ''} ${css.project}`}>
+                            <img src="/images/portfolio1.png" alt="Portfólio" />
+                            <span className="down-fast">Portfólio v1.0</span>
+                        </a>
+                        
+                        <a className={`${show ? 'swing-in' : ''} ${css.project}`}>
+                            <img src="/images/portfolio2.png" alt="Portfólio" />
+                            <span className="down-fast">Portfólio v2.0</span>
+                        </a>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 className={show ? 'down' : ''}>Trabalhos do IFRS</h3>
+
+                    <div className={css.projects}>
+                        <a className={`${show ? 'swing-in' : ''} ${css.project}`}>
+                            <img src="/images/projeto-integrador.png" alt="Projeto Integrador" />
+                            <span className="down-fast">Projeto Integrador</span>
+                        </a>
+                        
+                        <a className={`${show ? 'swing-in' : ''} ${css.project}`}>
+                            <img src="/images/criart.png" alt="Criart" />
+                            <span className="down-fast">Gráfica Criart</span>
+                        </a>
+                        
+                        <a className={`${show ? 'swing-in' : ''} ${css.project}`}>
+                            <img src="/images/jogo-da-velha.png" alt="Jogo da Velha" />
+                            <span className="down-fast">Jogo da Velha</span>
                         </a>
                     </div>
                 </section>
