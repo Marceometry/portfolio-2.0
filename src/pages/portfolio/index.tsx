@@ -1,11 +1,11 @@
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
-import Projects from '../components/Projects'
-import { Green, Purple } from '../components/TextColor'
-import { api } from '../services/api'
+import Footer from '../../components/Footer'
+import Navbar from '../../components/Navbar'
+import Projects from '../../components/Projects'
+import { Green, Purple } from '../../components/TextColor'
+import { api } from '../../services/api'
 
 import css from '../css/portfolio.module.scss'
 
@@ -71,6 +71,6 @@ export const getStaticProps: GetStaticProps = async () => {
 
     return {
         props: { projects },
-        revalidate: 2
+        revalidate: 60 * 60 * 8
     }
 }

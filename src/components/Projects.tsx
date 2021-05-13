@@ -105,7 +105,7 @@ export default function Projects({ inHomePage, projects }: ProjectsProps) {
                     <div className={css.projects}>
                         {projects.map(project => (
                             <>
-                            {project.origin === 'nlw' && (
+                            {project.origin === 'ifrs' && (
                             <Link href={`/projects/${project.id}`} key={project.id}>
                             <a className={`${show ? 'swing-in' : ''} ${css.project}`}>
                                 <img src={`/images/${project.img}`} alt={project.name} />
