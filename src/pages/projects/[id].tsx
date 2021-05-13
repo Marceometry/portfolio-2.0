@@ -14,7 +14,7 @@ type ProjectProps = {
 export default function Project({ project }: ProjectProps) {
     return (
         <div>
-            <Head>
+            {/* <Head>
                 <title>Marcelino | {project.name}</title>
             </Head>
 
@@ -70,7 +70,7 @@ export default function Project({ project }: ProjectProps) {
                     </section>
                 </div>
                 </main>
-            </div>
+            </div> */}
 
             <Footer />
         </div>
