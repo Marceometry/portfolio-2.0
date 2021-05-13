@@ -89,23 +89,23 @@ type Project = {
   webLink: string
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const { data } = await api.get('/api/findProjects')
+// export const getStaticPaths: GetStaticPaths = async () => {
+//   const { data } = await api.get('/api/findProjects')
 
-  const paths = data.map((project: Project) => ({
-    params: { id: project.id },
-  }))
+//   const paths = data.map((project: Project) => ({
+//     params: { id: project.id },
+//   }))
 
-  return { paths, fallback: false }
-}
+//   return { paths, fallback: false }
+// }
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const { data } = await api.get(`/api/projects/${params.id}`)
+// export const getStaticProps: GetStaticProps = async ({ params }) => {
+//   const { data } = await api.get(`/api/projects/${params.id}`)
 
-  const project = data
+//   const project = data
 
-  return {
-    props: { project },
-    revalidate: 60 * 60 * 24
-  }
-}
+//   return {
+//     props: { project },
+//     revalidate: 60 * 60 * 24
+//   }
+// }

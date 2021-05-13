@@ -45,7 +45,7 @@ export default function Portfolio({ projects }: PortfolioProps) {
                 </div>
             </div>
 
-            <Projects inHomePage={false} projects={projects} />
+            {/* <Projects inHomePage={false} projects={projects} /> */}
 
             <Footer />
         </div>
@@ -64,13 +64,13 @@ type Project = {
   webLink: string
 }
 
-export const getStaticProps: GetStaticProps = async () => {
-    const { data } = await api.get('/api/findProjects')
+// export const getStaticProps: GetStaticProps = async () => {
+//     const { data } = await api.get('/api/findProjects')
 
-    const projects = data
+//     const projects = data
 
-    return {
-        props: { projects },
-        revalidate: 60 * 60 * 8
-    }
-}
+//     return {
+//         props: { projects },
+//         revalidate: 60 * 60 * 8
+//     }
+// }

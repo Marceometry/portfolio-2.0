@@ -50,7 +50,7 @@ export default function Home({ projects }: HomeProps) {
 
       <Technologies />
 
-      <Projects inHomePage={true} projects={projects} />
+      {/* <Projects inHomePage={true} projects={projects} /> */}
 
       <Footer />
     </div>
@@ -69,13 +69,13 @@ type Project = {
   webLink: string
 }
 
-export const getStaticProps: GetStaticProps = async () => {
-    const { data } = await api.get('/api/findProjects')
+// export const getStaticProps: GetStaticProps = async () => {
+//     const { data } = await api.get('/api/findProjects')
 
-    const projects = data
+//     const projects = data
 
-    return {
-        props: { projects },
-        revalidate: 60 * 60 * 8
-    }
-}
+//     return {
+//         props: { projects },
+//         revalidate: 60 * 60 * 8
+//     }
+// }
