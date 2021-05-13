@@ -96,7 +96,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     params: { id: project.id },
   }))
 
-  return { paths, fallback: false }
+  return { paths, fallback: 'blocking' }
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
@@ -106,6 +106,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   return {
     props: { project },
-    revalidate: 60 * 60 * 24
+    revalidate: 2
   }
 }
