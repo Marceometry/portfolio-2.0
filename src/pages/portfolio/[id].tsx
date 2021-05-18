@@ -36,6 +36,19 @@ export default function Project({ project }: ProjectProps) {
 
                         <p className="swing-in">{project.description}</p>
                     </section>
+
+                    <section>
+                        <h3 className="side-appear-reverse">Tecnologias Utilizadas</h3>
+                        <hr className="focus-in" />
+
+                        <ul className={css.horizontal}>
+                            {project.technologies.map(tech => (
+                                <li className="swing-in">
+                                    {tech}
+                                </li>
+                            ))}
+                        </ul>
+                    </section>
                     
                     {project.features && (
                         <section>
@@ -56,7 +69,7 @@ export default function Project({ project }: ProjectProps) {
                         <h3 className="side-appear-reverse">Links:</h3>
                         <hr className="focus-in" />
 
-                        <ul id={css.links}>
+                        <ul className={css.horizontal} id={css.links}>
                             <a href={project.githubLink} target="_blank"><li className="swing-in"> <img src="/brands/github.svg" alt="" /> Repositório no Github </li></a>
 
                             {project.designLink && (
