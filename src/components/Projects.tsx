@@ -58,7 +58,7 @@ export default function Projects({ inHomePage, projects }: ProjectsProps) {
                         {projects.map(project => (
                             <>
                             {project.origin === 'nlw' && (
-                            <Link href={`/projects/${project.id}`} key={project.id}>
+                            <Link href={`/portfolio/${project.id}`} key={project.id}>
                             <a className={`${show ? 'swing-in' : ''} ${css.project}`}>
                                 <img src={`/images/${project.img}`} alt={project.name} />
                                 <span className="down-fast">{project.name}</span>
@@ -82,7 +82,7 @@ export default function Projects({ inHomePage, projects }: ProjectsProps) {
                         {projects.map(project => (
                             <>
                             {project.origin === 'my' && (
-                            <Link href={`/projects/${project.id}`} key={project.id}>
+                            <Link href={`/portfolio/${project.id}`} key={project.id}>
                             <a className={`${show ? 'swing-in' : ''} ${css.project}`}>
                                 <img src={`/images/${project.img}`} alt={project.name} />
                                 <span className="down-fast">{project.name}</span>
@@ -106,7 +106,7 @@ export default function Projects({ inHomePage, projects }: ProjectsProps) {
                         {projects.map(project => (
                             <>
                             {project.origin === 'ifrs' && (
-                            <Link href={`/projects/${project.id}`} key={project.id}>
+                            <Link href={`/portfolio/${project.id}`} key={project.id}>
                             <a className={`${show ? 'swing-in' : ''} ${css.project}`}>
                                 <img src={`/images/${project.img}`} alt={project.name} />
                                 <span className="down-fast">{project.name}</span>
