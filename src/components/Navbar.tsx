@@ -35,7 +35,13 @@ export default function Navbar() {
                 <li>
                     <a href="https://github.com/marceometry" target="_blank">
                     <img src="/brands/github.svg" alt="Github" />
-                    <span>Marceometry</span>
+                    <span>Github</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/marcelino-teixeira-796907212/" target="_blank">
+                    <img src="/brands/linkedin.svg" alt="Linkedin" />
+                    <span>Linkedin</span>
                     </a>
                 </li>
                 <li>
