@@ -19,8 +19,11 @@
     & > img {
       width: 50%;
       margin: 0 auto;
-      border-radius: 10px;
-      border: 1px solid var(--purple);
+
+      &.image {
+        border-radius: 10px;
+        border: 1px solid var(--purple);
+      }
     }
 
     div {
@@ -54,26 +57,28 @@
         }
       }
 
-      ul#links {
+      ul.horizontal {
         margin-top: .5rem;
         list-style: none;
         display: flex;
         align-items: center;
         justify-content: space-around;
 
-        li {
-          padding: .5rem 0;
-          transition: color, .2s;
-          display: flex;
-          align-items: center;
+        &#links {
+          li {
+            padding: .5rem 0;
+            transition: color, .2s;
+            display: flex;
+            align-items: center;
 
-          &:hover {
-            color: var(--purple-light);
-          }
+            &:hover {
+              color: var(--purple-light);
+            }
 
-          img {
-            height: 2rem;
-            margin-right: .5rem;
+            img {
+              height: 2rem;
+              margin-right: .5rem;
+            }
           }
         }
       }

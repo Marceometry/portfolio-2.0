@@ -43,7 +43,7 @@
             grid-template-columns: 1fr 1fr 1fr 1fr;
 
             .project {
-                height: 11rem;
+                height: fit-content;
                 position: relative;
                 text-align: center;
                 cursor: pointer;

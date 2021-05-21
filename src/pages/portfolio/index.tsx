@@ -1,13 +1,13 @@
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
-import Projects from '../components/Projects'
-import { Green, Purple } from '../components/TextColor'
-import { api } from '../services/api'
+import Footer from '../../components/Footer'
+import Navbar from '../../components/Navbar'
+import Projects from '../../components/Projects'
+import { Green, Purple } from '../../components/TextColor'
+import { api } from '../../services/api'
 
-import css from '../css/portfolio.module.scss'
+import css from '../../css/portfolio.module.scss'
 
 type PortfolioProps = {
     projects: Project[]

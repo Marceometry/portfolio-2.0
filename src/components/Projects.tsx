@@ -10,13 +10,8 @@ type ProjectsProps = {
 type Project = {
   id: string
   name: string
-  details: string
   origin: string
   img: string
-  technologies: string[]
-  githubLink: string
-  designLink: string
-  webLink: string
 }
 
 export default function Projects({ inHomePage, projects }: ProjectsProps) {
@@ -58,7 +53,7 @@ export default function Projects({ inHomePage, projects }: ProjectsProps) {
                         {projects.map(project => (
                             <>
                             {project.origin === 'nlw' && (
-                            <Link href={`/projects/${project.id}`} key={project.id}>
+                            <Link href={`/portfolio/${project.id}`} key={project.id}>
                             <a className={`${show ? 'swing-in' : ''} ${css.project}`}>
                                 <img src={`/images/${project.img}`} alt={project.name} />
                                 <span className="down-fast">{project.name}</span>
@@ -81,8 +76,8 @@ export default function Projects({ inHomePage, projects }: ProjectsProps) {
                     <div className={css.projects}>
                         {projects.map(project => (
                             <>
-                            {project.origin === 'nlw' && (
-                            <Link href={`/projects/${project.id}`} key={project.id}>
+                            {project.origin === 'my' && (
+                            <Link href={`/portfolio/${project.id}`} key={project.id}>
                             <a className={`${show ? 'swing-in' : ''} ${css.project}`}>
                                 <img src={`/images/${project.img}`} alt={project.name} />
                                 <span className="down-fast">{project.name}</span>
@@ -105,8 +100,8 @@ export default function Projects({ inHomePage, projects }: ProjectsProps) {
                     <div className={css.projects}>
                         {projects.map(project => (
                             <>
-                            {project.origin === 'nlw' && (
-                            <Link href={`/projects/${project.id}`} key={project.id}>
+                            {project.origin === 'ifrs' && (
+                            <Link href={`/portfolio/${project.id}`} key={project.id}>
                             <a className={`${show ? 'swing-in' : ''} ${css.project}`}>
                                 <img src={`/images/${project.img}`} alt={project.name} />
                                 <span className="down-fast">{project.name}</span>

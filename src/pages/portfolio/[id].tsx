@@ -27,7 +27,11 @@ export default function Project({ project }: ProjectProps) {
                     <h1>{project.name}</h1>
                 </header>
 
-                <img className="focus-in" src={`/images/${project.img}`} alt="Capa do Projeto" />
+                {project.mockup ? (
+                    <img className="focus-in" src={`/mockups/${project.mockup}`} alt="Capa do Projeto" />
+                ) : (
+                    <img className={`focus-in ${css.image}`} src={`/images/${project.img}`} alt="Capa do Projeto" />
+                )}
 
                 <div>
                     <section>
@@ -35,6 +39,19 @@ export default function Project({ project }: ProjectProps) {
                         <hr className="focus-in" />
 
                         <p className="swing-in">{project.description}</p>
+                    </section>
+
+                    <section>
+                        <h3 className="side-appear-reverse">Tecnologias Utilizadas</h3>
+                        <hr className="focus-in" />
+
+                        <ul className={css.horizontal}>
+                            {project.technologies.map(tech => (
+                                <li className="swing-in">
+                                    {tech}
+                                </li>
+                            ))}
+                        </ul>
                     </section>
                     
                     {project.features && (
@@ -56,7 +73,7 @@ export default function Project({ project }: ProjectProps) {
                         <h3 className="side-appear-reverse">Links:</h3>
                         <hr className="focus-in" />
 
-                        <ul id={css.links}>
+                        <ul className={css.horizontal} id={css.links}>
                             <a href={project.githubLink} target="_blank"><li className="swing-in"> <img src="/brands/github.svg" alt="" /> Repositório no Github </li></a>
 
                             {project.designLink && (
@@ -82,6 +99,7 @@ type Project = {
   name: string
   description: string
   img: string
+  mockup: string
   technologies: string[]
   features: string[]
   githubLink: string
@@ -96,7 +114,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     params: { id: project.id },
   }))
 
-  return { paths, fallback: false }
+  return { paths, fallback: 'blocking' }
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
@@ -106,6 +124,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   return {
     props: { project },
-    revalidate: 60 * 60 * 24
+    revalidate: 60 * 60 * 8
   }
 }

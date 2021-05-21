@@ -65,13 +65,8 @@ export default function Home({ projects }: HomeProps) {
 type Project = {
   id: string
   name: string
-  details: string
   origin: string
   img: string
-  technologies: string[]
-  githubLink: string
-  designLink: string
-  webLink: string
 }
 
 export const getStaticProps: GetStaticProps = async () => {
