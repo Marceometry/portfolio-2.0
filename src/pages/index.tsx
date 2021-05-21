@@ -20,10 +20,6 @@ export default function Home({ projects }: HomeProps) {
     <div>
       <Head>
         <title>Marcelino | FrontEnd Dev</title>
-        <meta property="title" content="Marcelino | FrontEnd Dev" />
-        <meta property="description" content="Site que desenvolvi utilizando React e Next.js para servir como meu portfólio pessoal." />
-        <meta property="image" content="/images/portfolio2.png" />
-        <meta property="url" content="https://marcelino-frontend.vercel.app/" />
       </Head>
   
       <div id="home" className={css.container}>
