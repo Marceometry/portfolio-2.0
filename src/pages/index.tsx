@@ -1,4 +1,7 @@
 import Head from 'next/head'
+import { GetStaticProps } from 'next'
+import { api } from '../services/api'
+
 import Navbar from '../components/Navbar'
 import About from '../components/About'
 import Technologies from '../components/Technologies'
@@ -7,8 +10,6 @@ import Footer from '../components/Footer'
 import { Green, Purple } from '../components/TextColor'
 
 import css from '../css/landing.module.scss'
-import { GetStaticProps } from 'next'
-import { api } from '../services/api'
 
 type HomeProps = {
   projects: Project[]
