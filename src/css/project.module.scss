@@ -19,8 +19,11 @@
     & > img {
       width: 50%;
       margin: 0 auto;
-      border-radius: 10px;
-      border: 1px solid var(--purple);
+
+      &.image {
+        border-radius: 10px;
+        border: 1px solid var(--purple);
+      }
     }
 
     div {

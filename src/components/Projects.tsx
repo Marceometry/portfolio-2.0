@@ -10,13 +10,8 @@ type ProjectsProps = {
 type Project = {
   id: string
   name: string
-  details: string
   origin: string
   img: string
-  technologies: string[]
-  githubLink: string
-  designLink: string
-  webLink: string
 }
 
 export default function Projects({ inHomePage, projects }: ProjectsProps) {

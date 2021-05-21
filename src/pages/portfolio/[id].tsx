@@ -27,7 +27,11 @@ export default function Project({ project }: ProjectProps) {
                     <h1>{project.name}</h1>
                 </header>
 
-                <img className="focus-in" src={`/images/${project.img}`} alt="Capa do Projeto" />
+                {project.mockup ? (
+                    <img className="focus-in" src={`/mockups/${project.mockup}`} alt="Capa do Projeto" />
+                ) : (
+                    <img className={`focus-in ${css.image}`} src={`/images/${project.img}`} alt="Capa do Projeto" />
+                )}
 
                 <div>
                     <section>
@@ -95,6 +99,7 @@ type Project = {
   name: string
   description: string
   img: string
+  mockup: string
   technologies: string[]
   features: string[]
   githubLink: string
