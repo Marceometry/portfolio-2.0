@@ -24,9 +24,12 @@
         align-items: center;
         transition: color .2s;
 
-        img {
-          width: 2rem;
-          margin-right: .5rem;
+        div {
+          margin-right: 1rem;
+
+          img {
+            width: 1.75rem;
+          }
         }
 
         a {

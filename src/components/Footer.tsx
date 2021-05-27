@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Link as LinkScroll } from 'react-scroll'
 import { Purple } from './TextColor'
 
@@ -16,23 +17,23 @@ export default function Footer() {
                 <ul id={css.menu}>
                     {router.pathname === '/' ? (
                         <>
-                        <LinkScroll to='home' smooth={true}><li>Home</li></LinkScroll>
-                        <LinkScroll to='about' smooth={true}><li>Sobre</li></LinkScroll>
-                        <LinkScroll to='footer' smooth={true}><li>Contato</li></LinkScroll>
-                        <LinkScroll to='projects' smooth={true}><li>Projetos</li></LinkScroll>
-                        <Link href="/portfolio"><a><li>Portfólio</li></a></Link>
-                        <LinkScroll to='technologies' smooth={true}><li>Tecnologias</li></LinkScroll>
+                        <li><LinkScroll to='home' smooth={true}>Home</LinkScroll></li>
+                        <li><LinkScroll to='about' smooth={true}>Sobre</LinkScroll></li>
+                        <li><LinkScroll to='footer' smooth={true}>Contato</LinkScroll></li>
+                        <li><LinkScroll to='projects' smooth={true}>Projetos</LinkScroll></li>
+                        <li><Link href="/portfolio"><a>Portfólio</a></Link></li>
+                        <li><LinkScroll to='technologies' smooth={true}>Tecnologias</LinkScroll></li>
                         </>
                     ) : router.pathname === '/portfolio' ? (
                         <>
-                        <Link href='/'><a><li>Home</li></a></Link>
-                        <LinkScroll to='nlw' smooth={true}><li>Next Level Week</li></LinkScroll>
-                        <LinkScroll to='mine' smooth={true}><li>Meus Projetos</li></LinkScroll>
+                        <li><Link href='/'><a>Home</a></Link></li>
+                        <li><LinkScroll to='nlw' smooth={true}>Next Level Week</LinkScroll></li>
+                        <li><LinkScroll to='mine' smooth={true}>Meus Projetos</LinkScroll></li>
                         </>
                     ) : (
                         <>
-                        <Link href='/'><a><li>Home</li></a></Link>
-                        <Link href='/portfolio'><a><li>Portfólio</li></a></Link>
+                        <li><Link href='/'><a>Home</a></Link></li>
+                        <li><Link href='/portfolio'><a>Portfólio</a></Link></li>
                         </>
                     )}
                 </ul>
@@ -45,11 +46,11 @@ export default function Footer() {
 
                 <ul>
                     <li>
-                        <img src="/brands/whatsapp.svg" alt="Email" />
+                        <Image width={30} height={30} src="/brands/whatsapp.svg" alt="Email" />
                         <span>51 99579-4033</span>
                     </li>
                     <li>
-                        <img src="/icons/envelope-purple.svg" alt="Email" />
+                        <Image width={30} height={30} src="/icons/envelope-purple.svg" alt="Email" />
                         <span>marceometry@gmail.com</span>
                     </li>
                 </ul>

@@ -45,9 +45,12 @@
                 align-items: center;
                 justify-content: center;
                 
-                img {
-                    width: 1.5rem;
-                    margin-right: .5rem;
+                & > div {
+                    margin-right: .5rem!important;
+    
+                    img {
+                        width: 1.5rem;
+                    }
                 }
             }
         }

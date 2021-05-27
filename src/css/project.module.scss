@@ -65,7 +65,7 @@
         justify-content: space-around;
 
         &#links {
-          li {
+          a {
             padding: .5rem 0;
             transition: color, .2s;
             display: flex;
@@ -75,9 +75,13 @@
               color: var(--purple-light);
             }
 
-            img {
-              height: 2rem;
-              margin-right: .5rem;
+            & > div {
+              width: fit-content;
+              margin-right: .5rem!important;
+
+              img {
+                height: 2rem;
+              }
             }
           }
         }

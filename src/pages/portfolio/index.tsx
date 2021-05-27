@@ -1,5 +1,6 @@
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
+import Image from 'next/image'
 
 import Footer from '../../components/Footer'
 import Navbar from '../../components/Navbar'
@@ -33,7 +34,7 @@ export default function Portfolio({ projects }: PortfolioProps) {
                     <p className="side-appear-reverse"> Aqui você pode encontrar projetos de <Green>eventos de programação</Green> como a NLW, porém com funcionalidades
                     e <Green>recursos a mais</Green> que adicionei. </p>
 
-                    <img className="rotate" src="/icons/code.svg" alt="</>" />
+                    <Image width={300} height={250} className="rotate" src="/icons/code.svg" alt="</>" />
                     
                     <p className="side-appear"> Também é possível encontrar <Green>trabalhos</Green> do ensino médio técnico do <Green>IFRS</Green>, assim como 
                     meus <Green>projetos particulares</Green>. </p>
@@ -41,7 +42,7 @@ export default function Portfolio({ projects }: PortfolioProps) {
                 </main>
 
                 <div id={css.arrowDown}>
-                    <img className="bounce" src="/icons/arrow-down.svg" alt="v" />
+                    <Image width={80} height={150} className="bounce" src="/icons/arrow-down.svg" alt="v" />
                 </div>
             </div>
 

@@ -1,4 +1,5 @@
 import { useState, useRef, useLayoutEffect } from 'react'
+import Image from 'next/image'
 import css from '../css/components/technologies.module.scss'
 
 export default function Technologies() {
@@ -33,37 +34,37 @@ export default function Technologies() {
 
                     <div className={css.technologies}>
                     <div className={css.technology}>
-                        <img src="/brands/html.svg" alt="" />
+                        <Image width={50} height={50} src="/brands/html.svg" alt="" />
                         <span>HTML</span>
                     </div>
                     
                     <div className={css.technology}>
-                        <img src="/brands/css.svg" alt="" />
+                        <Image width={50} height={50} src="/brands/css.svg" alt="" />
                         <span>CSS</span>
                     </div>
                     
                     <div className={css.technology}>
-                        <img src="/brands/js.svg" alt="" />
+                        <Image width={50} height={50} src="/brands/js.svg" alt="" />
                         <span>JavaScript</span>
                     </div>
                     
                     <div className={css.technology}>
-                        <img src="/brands/ts.svg" alt="" />
+                        <Image width={50} height={50} src="/brands/ts.svg" alt="" />
                         <span>TypeScript</span>
                     </div>
                     
                     <div className={css.technology}>
-                        <img src="/brands/react.svg" alt="" />
+                        <Image width={50} height={50} src="/brands/react.svg" alt="" />
                         <span>ReactJS</span>
                     </div>
                     
                     <div className={css.technology}>
-                        <img src="/brands/next.svg" alt="" />
+                        <Image width={50} height={50} src="/brands/next.svg" alt="" />
                         <span>Next.js</span>
                     </div>
                     
                     <div className={css.technology}>
-                        <img src="/brands/sass.svg" alt="" />
+                        <Image width={50} height={50} src="/brands/sass.svg" alt="" />
                         <span>Sass</span>
                     </div>
                     </div>
@@ -77,27 +78,27 @@ export default function Technologies() {
 
                     <div className={css.technologies}>
                     <div className={css.technology}>
-                        <img src="/brands/node.svg" alt="" />
+                        <Image width={50} height={50} src="/brands/node.svg" alt="" />
                         <span>Node.js</span>
                     </div>
                     
                     <div className={css.technology}>
-                        <img src="/brands/mongo.svg" alt="" />
+                        <Image width={50} height={50} src="/brands/mongo.svg" alt="" />
                         <span>MongoDB</span>
                     </div>
                     
                     <div className={css.technology}>
-                        <img src="/brands/axios.svg" alt="" />
+                        <Image width={50} height={50} src="/brands/axios.svg" alt="" />
                         <span>Axios</span>
                     </div>
                     
                     <div className={css.technology}>
-                        <img src="/icons/database.svg" alt="" />
+                        <Image width={50} height={50} src="/icons/database.svg" alt="" />
                         <span>SQL</span>
                     </div>
                     
                     <div className={css.technology}>
-                        <img src="/icons/database.svg" alt="" />
+                        <Image width={50} height={50} src="/icons/database.svg" alt="" />
                         <span>SQLite</span>
                     </div>
                     </div>

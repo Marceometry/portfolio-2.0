@@ -1,6 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from "next"
 import Head from "next/head"
-import React from "react"
+import Image from 'next/image'
+
 import Footer from "../../components/Footer"
 import Navbar from "../../components/Navbar"
 
@@ -74,14 +75,14 @@ export default function Project({ project }: ProjectProps) {
                         <hr className="focus-in" />
 
                         <ul className={css.horizontal} id={css.links}>
-                            <a href={project.githubLink} target="_blank"><li className="swing-in"> <img src="/brands/github.svg" alt="" /> Repositório no Github </li></a>
+                            <li className="swing-in"><a rel="noopener noreferrer" href={project.githubLink} target="_blank"> <Image width={40} height={40} src="/brands/github.svg" alt="" /> Repositório no Github </a></li>
 
                             {project.designLink && (
-                                <a href={project.designLink} target="_blank"><li className="swing-in"> <img src="/brands/figma.svg" alt="" /> Design no Figma </li></a>
+                                <li className="swing-in"><a rel="noopener noreferrer" href={project.designLink} target="_blank"> <Image width={40} height={40} src="/brands/figma.svg" alt="" /> Design no Figma </a></li>
                             )}
                             
                             {project.webLink && (
-                                <a href={project.webLink} target="_blank"><li className="swing-in"> <img src="/icons/globe.svg" alt="" /> Acessar na web </li></a>
+                                <li className="swing-in"><a rel="noopener noreferrer" href={project.webLink} target="_blank"> <Image width={40} height={40} src="/icons/globe.svg" alt="" /> Acessar na web </a></li>
                             )}
                         </ul>
                     </section>

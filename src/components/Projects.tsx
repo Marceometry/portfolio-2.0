@@ -1,5 +1,6 @@
-import React, { useState, useRef, useLayoutEffect } from "react"
+import React, { useState, useRef, useLayoutEffect, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import css from '../css/components/projects.module.scss'
 
 type ProjectsProps = {
@@ -16,7 +17,31 @@ type Project = {
 
 export default function Projects({ inHomePage, projects }: ProjectsProps) {
     const [show, doShow] = useState(false)
+    const [myProjects, setMyProjects] = useState([])
+    const [nlwProjects, setNlwProjects] = useState([])
+    // const [ifrsProjects, setIfrsProjects] = useState([])
     const ref = useRef(null)
+
+    useEffect(() => {
+        const myArray = myProjects
+        const nlwArray = nlwProjects
+        // const ifrsArray = ifrsProjects
+
+        projects.map(project => (
+            project.origin === 'my' ? (
+                myArray.push(project)
+            ) : project.origin === 'nlw' ? (
+                nlwArray.push(project)
+            ) : ''
+            // project.origin === 'ifrs' ? (
+            //     // ifrsArray.push(project)
+            // )
+        ))
+
+        setMyProjects(myArray)
+        setNlwProjects(nlwArray)
+        // setIfrsProjects(ifrsArray)
+    }, [])
     
     useLayoutEffect(() => {
         const topPos = element => element.getBoundingClientRect().top
@@ -50,16 +75,13 @@ export default function Projects({ inHomePage, projects }: ProjectsProps) {
                     )}
 
                     <div className={css.projects}>
-                        {projects.map(project => (
-                            <>
-                            {project.origin === 'nlw' && (
+                        {nlwProjects.map(project => (
                             <Link href={`/portfolio/${project.id}`} key={project.id}>
                             <a className={`${show ? 'swing-in' : ''} ${css.project}`}>
-                                <img src={`/images/${project.img}`} alt={project.name} />
+                                <Image width={300} height={200} src={`/images/${project.img}`} alt={project.name} />
                                 <span className="down-fast">{project.name}</span>
                             </a>
-                            </Link>)}
-                            </>
+                            </Link>
                         ))}
                     </div>
                 </section>
@@ -74,16 +96,13 @@ export default function Projects({ inHomePage, projects }: ProjectsProps) {
                     )}
 
                     <div className={css.projects}>
-                        {projects.map(project => (
-                            <>
-                            {project.origin === 'my' && (
+                        {myProjects.map(project => (
                             <Link href={`/portfolio/${project.id}`} key={project.id}>
                             <a className={`${show ? 'swing-in' : ''} ${css.project}`}>
-                                <img src={`/images/${project.img}`} alt={project.name} />
+                                <Image width={300} height={200} src={`/images/${project.img}`} alt={project.name} />
                                 <span className="down-fast">{project.name}</span>
                             </a>
-                            </Link>)}
-                            </>
+                            </Link>
                         ))}
                     </div>
                 </section>
@@ -98,16 +117,13 @@ export default function Projects({ inHomePage, projects }: ProjectsProps) {
                     )}
 
                     <div className={css.projects}>
-                        {projects.map(project => (
-                            <>
-                            {project.origin === 'ifrs' && (
+                        {ifrsProjects.map(project => (
                             <Link href={`/portfolio/${project.id}`} key={project.id}>
                             <a className={`${show ? 'swing-in' : ''} ${css.project}`}>
-                                <img src={`/images/${project.img}`} alt={project.name} />
+                                <Image width={300} height={200} src={`/images/${project.img}`} alt={project.name} />
                                 <span className="down-fast">{project.name}</span>
                             </a>
-                            </Link>)}
-                            </>
+                            </Link>
                         ))}
                     </div>
                 </section> */}

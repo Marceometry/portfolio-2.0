@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import { GetStaticProps } from 'next'
 import { api } from '../services/api'
 
@@ -35,7 +36,7 @@ export default function Home({ projects }: HomeProps) {
             <p className="side-appear-reverse"> Domino <Green>HTML</Green> e <Green>CSS</Green> e atualmente estou focado em praticar a 
             biblioteca JavaScript <Green>React</Green> juntamente do framework <Green>Next.js</Green> </p>
 
-            <img className="rotate" src="/icons/code.svg" alt="</>" />
+            <Image width={300} height={250} className="rotate" src="/icons/code.svg" alt="</>" />
             
             <p className="side-appear"> Procuro sempre me atentar aos <Green>mínimos detalhes</Green> da interface, pensando sempre na 
             usabilidade e <Green>experiência</Green> do <Green>usuário</Green>. </p>
@@ -43,7 +44,7 @@ export default function Home({ projects }: HomeProps) {
         </main>
         
         <div id={css.arrowDown}>
-            <img className="bounce" src="/icons/arrow-down.svg" alt="v" />
+            <Image width={80} height={150} className="bounce" src="/icons/arrow-down.svg" alt="v" />
         </div>
       </div>
 
