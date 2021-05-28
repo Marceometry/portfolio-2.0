@@ -5,7 +5,6 @@ import css from '../css/components/projects.module.scss'
 
 type ProjectsProps = {
     projects: Project[]
-    inHomePage: boolean
 }
 
 type Project = {
@@ -15,7 +14,7 @@ type Project = {
   img: string
 }
 
-export default function Projects({ inHomePage, projects }: ProjectsProps) {
+export default function ProjectList({ projects }: ProjectsProps) {
     const [show, doShow] = useState(false)
     const [myProjects, setMyProjects] = useState([])
     const [nlwProjects, setNlwProjects] = useState([])
@@ -68,11 +67,9 @@ export default function Projects({ inHomePage, projects }: ProjectsProps) {
                 <section>
                     <h3 className={show ? 'down' : ''}>Next Level Week (Rocketseat)</h3>
                     
-                    {inHomePage && (
-                        <Link href="/portfolio">
-                            <a>Ver mais</a>
-                        </Link>
-                    )}
+                    <Link href="/portfolio">
+                        <a>Ver mais</a>
+                    </Link>
 
                     <div className={css.projects}>
                         {nlwProjects.map(project => (
@@ -89,11 +86,9 @@ export default function Projects({ inHomePage, projects }: ProjectsProps) {
                 <section>
                     <h3 className={show ? 'down' : ''}>Meus Projetos</h3>
                     
-                    {inHomePage && (
-                        <Link href="/portfolio">
-                            <a>Ver mais</a>
-                        </Link>
-                    )}
+                    <Link href="/portfolio">
+                        <a>Ver mais</a>
+                    </Link>
 
                     <div className={css.projects}>
                         {myProjects.map(project => (
@@ -110,11 +105,9 @@ export default function Projects({ inHomePage, projects }: ProjectsProps) {
                 {/* <section>
                     <h3 className={show ? 'down' : ''}>Trabalhos do IFRS</h3>
                     
-                    {inHomePage && (
-                        <Link href="/portfolio">
-                            <a>Ver mais</a>
-                        </Link>
-                    )}
+                    <Link href="/portfolio">
+                        <a>Ver mais</a>
+                    </Link>
 
                     <div className={css.projects}>
                         {ifrsProjects.map(project => (

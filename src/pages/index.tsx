@@ -6,7 +6,7 @@ import { api } from '../services/api'
 import Navbar from '../components/Navbar'
 import About from '../components/About'
 import Technologies from '../components/Technologies'
-import Projects from '../components/Projects'
+import ProjectList from '../components/ProjectList'
 import Footer from '../components/Footer'
 import { Green, Purple } from '../components/TextColor'
 
@@ -52,7 +52,7 @@ export default function Home({ projects }: HomeProps) {
 
       <Technologies />
 
-      <Projects inHomePage={true} projects={projects} />
+      <ProjectList projects={projects} />
 
       <Footer />
     </div>

@@ -1,0 +1,47 @@
+.container {
+    display: flex;
+    // border: 1px solid var(--purple);
+
+    &:not(:first-child) {
+        margin-top: 3rem;
+    }
+
+    & > div {
+        width: 50%;
+    }
+
+    img {
+        border-radius: 5px;
+        object-fit: cover;
+    }
+
+    .info {
+        padding: 0 3rem;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+        p {
+            max-width: 100%;
+            font-size: 1rem;
+            text-align: justify;
+            max-height: 100px;
+            overflow: hidden;
+        }
+
+        a {
+            width: 100%;
+            padding: .5rem;
+            text-align: center;
+            border-radius: 5px;
+            background: var(--purple);
+            transition-property: background, color;
+            transition-duration: .3s;
+
+            &:hover {
+                color: var(--background);
+                background: var(--green);
+            }
+        }
+    }
+}

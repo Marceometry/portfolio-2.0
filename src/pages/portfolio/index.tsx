@@ -4,11 +4,11 @@ import Image from 'next/image'
 
 import Footer from '../../components/Footer'
 import Navbar from '../../components/Navbar'
-import Projects from '../../components/Projects'
 import { Green, Purple } from '../../components/TextColor'
 import { api } from '../../services/api'
 
 import css from '../../css/portfolio.module.scss'
+import ProjectSection from '../../components/ProjectSection'
 
 type PortfolioProps = {
     projects: Project[]
@@ -46,7 +46,11 @@ export default function Portfolio({ projects }: PortfolioProps) {
                 </div>
             </div>
 
-            <Projects inHomePage={false} projects={projects} />
+            <div className={css.projectsContainer}>
+                {projects.map(project => (
+                    <ProjectSection project={project} />
+                ))}
+            </div>
 
             <Footer />
         </div>
@@ -56,7 +60,7 @@ export default function Portfolio({ projects }: PortfolioProps) {
 type Project = {
   id: string
   name: string
-  details: string
+  description: string
   origin: string
   img: string
   technologies: string[]
