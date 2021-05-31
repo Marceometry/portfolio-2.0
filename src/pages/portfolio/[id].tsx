@@ -39,7 +39,7 @@ export default function Project({ project }: ProjectProps) {
                         <h3 className="side-appear-reverse">Descrição do Projeto</h3>
                         <hr className="focus-in" />
 
-                        <p className="swing-in">{project.description}</p>
+                        <p className="swing-in">{project.details}</p>
                     </section>
 
                     <section>
@@ -98,7 +98,7 @@ export default function Project({ project }: ProjectProps) {
 type Project = {
   id: string
   name: string
-  description: string
+  details: string
   img: string
   mockup: string
   technologies: string[]

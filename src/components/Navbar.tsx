@@ -21,8 +21,6 @@ export default function Navbar() {
                     <>
                     <li><Link href='/'><a>HOME</a></Link></li>
                     <li><LinkScroll to='footer' smooth={true}>CONTATO</LinkScroll></li>
-                    <li><LinkScroll to='nlw' smooth={true}>NEXT LEVEL WEEK</LinkScroll></li>
-                    <li><LinkScroll to='mine' smooth={true}>MEUS PROJETOS</LinkScroll></li>
                     </>
                 ) : (
                     <>

@@ -21,7 +21,7 @@ export default function Portfolio({ projects }: PortfolioProps) {
                 <title>Marcelino | Portfolio</title>
             </Head>
 
-            <div className={css.container}>
+            <div className={css.container} id="portfolio">
                 <Navbar />
 
                 <main>
@@ -61,16 +61,22 @@ type Project = {
   id: string
   name: string
   description: string
+  details: string
   origin: string
   img: string
   technologies: string[]
   githubLink: string
   designLink: string
   webLink: string
+  order: number
 }
 
 export const getStaticProps: GetStaticProps = async () => {
     const { data } = await api.get('/api/findProjects')
+
+    data.sort(function (a, b) {
+        return a.order - b.order
+    })
 
     const projects = data
 

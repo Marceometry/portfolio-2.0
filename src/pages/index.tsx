@@ -6,7 +6,7 @@ import { api } from '../services/api'
 import Navbar from '../components/Navbar'
 import About from '../components/About'
 import Technologies from '../components/Technologies'
-import ProjectList from '../components/ProjectList'
+import ProjectsList from '../components/ProjectsList'
 import Footer from '../components/Footer'
 import { Green, Purple } from '../components/TextColor'
 
@@ -52,7 +52,7 @@ export default function Home({ projects }: HomeProps) {
 
       <Technologies />
 
-      <ProjectList projects={projects} />
+      <ProjectsList projects={projects} />
 
       <Footer />
     </div>
@@ -68,6 +68,10 @@ type Project = {
 
 export const getStaticProps: GetStaticProps = async () => {
     const { data } = await api.get('/api/findProjects')
+
+    data.sort(function (a, b) {
+        return a.order - b.order
+    })
 
     const projects = data
 

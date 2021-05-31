@@ -1,6 +1,11 @@
 .container {
     display: flex;
-    // border: 1px solid var(--purple);
+    opacity: 0;
+    transition: all 0.2s;
+
+    &.show {
+        opacity: 1;
+    }
 
     &:not(:first-child) {
         margin-top: 3rem;
@@ -8,10 +13,13 @@
 
     & > div {
         width: 50%;
+
+        &:first-child {
+            border-radius: 5px;
+        }
     }
 
     img {
-        border-radius: 5px;
         object-fit: cover;
     }
 
